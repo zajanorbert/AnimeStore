@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Anime_Store"
         mc:Ignorable="d"
-        Title="Anime4every1" Height="450" Width="800"
+        Title="Anime4every1" Height="564" Width="807.5"
         ResizeMode="CanResizeWithGrip">
     <Grid>
         

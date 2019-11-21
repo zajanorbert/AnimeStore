@@ -1,0 +1,99 @@
+﻿<Window x:Class="Anime_Store.Users.SignUp"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Anime_Store.Users"
+        mc:Ignorable="d"
+        Title="SignUp" Height="450" Width="800"
+        WindowStyle="None">
+    <Window.Resources>
+        <Style TargetType="Label" x:Key="TextStyle">
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="VerticalAlignment" Value="Top"/>
+            <Setter Property="FontSize" Value="20"/>
+            <Setter Property="FontFamily" Value="Luminari"/>
+            <Setter Property="Foreground" Value="Black"/>
+            <Setter Property="Width" Value="auto"/>
+        </Style>
+
+        <Style TargetType="TextBox" x:Key="TextBoxStyle">
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="VerticalAlignment" Value="Top"/>
+            <Setter Property="FontSize" Value="20"/>
+            <Setter Property="Height" Value="30"/>
+            <Setter Property="Width" Value="280"/>
+        </Style>
+
+        <Style TargetType="PasswordBox" x:Key="PswBoxStyle">
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="VerticalAlignment" Value="Top"/>
+            <Setter Property="FontSize" Value="20"/>
+            <Setter Property="PasswordChar" Value="*"/>
+            <Setter Property="Height" Value="30"/>
+            <Setter Property="Width" Value="280"/>
+        </Style>
+
+        <ControlTemplate x:Key="TextBoxBaseControlTemplate" TargetType="{x:Type TextBoxBase}">
+            <Border Background="{TemplateBinding Background}" 
+                x:Name="Bd" BorderBrush="Black"
+                BorderThickness="{TemplateBinding BorderThickness}" CornerRadius="10">
+                <ScrollViewer x:Name="PART_ContentHost"/>
+            </Border>
+            <ControlTemplate.Triggers>
+                <Trigger Property="IsEnabled" Value="False">
+                    <Setter Property="Background" Value="{DynamicResource {x:Static SystemColors.ControlBrushKey}}" TargetName="Bd"/>
+                    <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.GrayTextBrushKey}}"/>
+                </Trigger>
+                <Trigger Property="Width" Value="Auto">
+                    <Setter Property="MinWidth" Value="100"/>
+                </Trigger>
+                <Trigger Property="Height" Value="Auto">
+                    <Setter Property="MinHeight" Value="20"/>
+                </Trigger>
+            </ControlTemplate.Triggers>
+        </ControlTemplate>
+
+        <ControlTemplate x:Key="PasswordBoxControlTemplate" TargetType="{x:Type PasswordBox}">
+            <Border Background="{TemplateBinding Background}" 
+                x:Name="Bd" BorderBrush="Black"
+                BorderThickness="{TemplateBinding BorderThickness}" CornerRadius="10">
+                <ScrollViewer x:Name="PART_ContentHost"/>
+            </Border>
+            <ControlTemplate.Triggers>
+                <Trigger Property="IsEnabled" Value="False">
+                    <Setter Property="Background" Value="{DynamicResource {x:Static SystemColors.ControlBrushKey}}" TargetName="Bd"/>
+                    <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.GrayTextBrushKey}}"/>
+                </Trigger>
+                <Trigger Property="Width" Value="Auto">
+                    <Setter Property="MinWidth" Value="100"/>
+                </Trigger>
+                <Trigger Property="Height" Value="Auto">
+                    <Setter Property="MinHeight" Value="20"/>
+                </Trigger>
+            </ControlTemplate.Triggers>
+        </ControlTemplate>
+
+        <ControlTemplate x:Key="ButtonTemplate" TargetType="{x:Type Button}">
+            <Border Background="DeepPink"  CornerRadius="20" BorderThickness="{TemplateBinding BorderThickness}">
+                <Label Content="{TemplateBinding Content}" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="16" FontWeight="Bold"/>
+            </Border>
+        </ControlTemplate>
+
+    </Window.Resources>
+    <Border BorderBrush="Black" BorderThickness="5" CornerRadius="10">
+        <Grid>
+            <Grid.Background>
+                <ImageBrush ImageSource="/Pictures/17730.jpg"/>
+            </Grid.Background>
+            <Label Content="Sign Up" Style="{StaticResource TextStyle}" Margin="25,10,655,0" FontSize="26"/>
+            <Label Content="User Name" Style="{StaticResource TextStyle}" Margin="119,77,555,0"/>
+            <Label Content="E-mail address" Style="{StaticResource TextStyle}" Margin="98,151,544,0"/>
+            <Label Content="Password" Style="{StaticResource TextStyle}" Margin="119,235,570,0"/>
+            <TextBox x:Name="reg_Username" Style="{StaticResource TextBoxStyle}" Template="{StaticResource TextBoxBaseControlTemplate}" Margin="25,116,477,0" />
+            <TextBox x:Name="reg_Email" Style="{StaticResource TextBoxStyle}" Template="{StaticResource TextBoxBaseControlTemplate}" Margin="25,190,477,0" />
+            <PasswordBox x:Name="reg_Password" Style="{StaticResource PswBoxStyle}" Template="{StaticResource PasswordBoxControlTemplate}" Margin="25,274,477,0" />
+            <Button x:Name="reg_Signup" Template="{StaticResource ButtonTemplate}" Width="115" Height="36" Content="Sign Up" Margin="98,341,568,55"/>
+        </Grid>
+    </Border>
+</Window>

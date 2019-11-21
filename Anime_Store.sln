@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29424.173
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Anime Store", "Anime Store\Anime Store.csproj", "{7DA87C93-7EE5-430A-A269-EF272357E4EA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Anime_Store", "Anime_Store\Anime_Store.csproj", "{7DA87C93-7EE5-430A-A269-EF272357E4EA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -20,6 +20,6 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {0C486E80-0983-4E1E-9E64-5D7CA35D757C}
+		SolutionGuid = {1AC09509-4750-425C-B298-CFE5F83DFF79}
 	EndGlobalSection
 EndGlobal
