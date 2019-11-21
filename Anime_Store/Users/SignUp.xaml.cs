@@ -22,6 +22,15 @@ namespace Anime_Store.Users
         public SignUp()
         {
             InitializeComponent();
+            this.KeyDown += SignUpKeyDown;
+        }
+        
+        private void SignUpKeyDown(Object sender, KeyEventArgs e)
+        {
+            if(e.Key == Key.Escape)
+            {
+                this.Close();
+            }
         }
     }
 }

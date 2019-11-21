@@ -6,7 +6,10 @@
         xmlns:local="clr-namespace:Anime_Store.Users"
         mc:Ignorable="d"
         Title="Login" Height="450" Width="800"
-        WindowStyle="None">
+        WindowStyle="None"
+        AllowsTransparency="True"
+        WindowStartupLocation="CenterScreen">
+
     <Window.Resources>
         <Style TargetType="Label" x:Key="TextStyle">
             <Setter Property="HorizontalAlignment" Value="Center"/>
@@ -16,7 +19,7 @@
             <Setter Property="Foreground" Value="White"/>
             <Setter Property="Width" Value="auto"/>
         </Style>
-        
+
         <Style TargetType="TextBox" x:Key="TextBoxStyle">
             <Setter Property="HorizontalAlignment" Value="Center"/>
             <Setter Property="VerticalAlignment" Value="Top"/>
@@ -32,6 +35,11 @@
             <Setter Property="PasswordChar" Value="*"/>
             <Setter Property="Height" Value="30"/>
             <Setter Property="Width" Value="280"/>
+        </Style>
+
+        <Style TargetType="Button" x:Key="ButtonStyle">
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="VerticalAlignment" Value="Top"/>
         </Style>
 
         <ControlTemplate x:Key="TextBoxBaseControlTemplate" TargetType="{x:Type TextBoxBase}">
@@ -75,10 +83,13 @@
         </ControlTemplate>
 
         <ControlTemplate x:Key="ButtonTemplate" TargetType="{x:Type Button}">
-            <Border Background="DeepPink"  CornerRadius="20" BorderThickness="{TemplateBinding BorderThickness}">
+
+            <Border Background="{TemplateBinding Background}"  CornerRadius="20" BorderThickness="{TemplateBinding BorderThickness}">
                 <Label Content="{TemplateBinding Content}" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="16" FontWeight="Bold"/>
             </Border>
+
         </ControlTemplate>
+
 
     </Window.Resources>
     <Border BorderBrush="Black" BorderThickness="5" CornerRadius="10">
@@ -90,16 +101,21 @@
             <Label Style="{StaticResource TextStyle}" x:Name="lbl_Title" Content="Login First" FontSize="26" FontWeight="Bold" Margin="19,10,622,0"/>
             <Label Style="{StaticResource TextStyle}" x:Name="lbl_UserName" Content="UserName" Margin="10,95,662,0" />
             <Label Style="{StaticResource TextStyle}" x:Name="lbl_Password" Content="Password" Margin="19,189,662,0"/>
+            <Label Style="{StaticResource TextStyle}" Content="Don't have an account? Registrate here: " Margin="10,396,416,0" Width="364"/>
 
             <TextBox x:Name="log_UserName" Style="{StaticResource TextBoxStyle}" Template="{StaticResource TextBoxBaseControlTemplate}" HorizontalAlignment="Center" Height="37" Width="278" VerticalAlignment="Top" Margin="125,95,379,0" FontSize="20"/>
 
             <PasswordBox x:Name="log_Password" Style="{StaticResource PswBoxStyle}" Template="{StaticResource PasswordBoxControlTemplate}" Height="38" Width="278" Margin="125,188,379,0" />
 
-            <Button x:Name="btn_Login" Content="Login" Template="{StaticResource ButtonTemplate}" HorizontalAlignment="Center" VerticalAlignment="Top" Width="115" Height="50" Margin="288,264,379,0"/>
-            
-            <Label Style="{StaticResource TextStyle}" Content="Don't have an account? Registrate here: " Margin="10,396,549,0"/>
-            
-            <Button Template="{StaticResource ButtonTemplate}" Content="SignUp" HorizontalAlignment="Center" VerticalAlignment="Top" Width="115" Height="36" Margin="238,390,429,0"/>
+            <Button x:Name="btn_Login" Style="{StaticResource ButtonStyle}" Content="Login" Template="{StaticResource ButtonTemplate}" Background="DeepPink" Width="115" Height="50" Margin="288,264,379,0"/>
+
+            <Button x:Name="btn_SignUp" Style="{StaticResource ButtonStyle}" Template="{StaticResource ButtonTemplate}" Content="SignUp" Width="116" Height="36" Background="DeepPink" Margin="374,396,300,0"/>
+
+            <Button x:Name="log_Exit" Style="{StaticResource ButtonStyle}" Template="{StaticResource ButtonTemplate}" Margin="739,0,0,0" Background="Transparent" Height="51" Width="51">
+                <StackPanel>
+                    <Image Source="/Pictures/Power.png"/>
+                </StackPanel>
+            </Button>
         </Grid>
     </Border>
 </Window>

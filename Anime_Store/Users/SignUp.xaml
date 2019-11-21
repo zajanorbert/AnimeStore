@@ -6,7 +6,9 @@
         xmlns:local="clr-namespace:Anime_Store.Users"
         mc:Ignorable="d"
         Title="SignUp" Height="450" Width="800"
-        WindowStyle="None">
+        WindowStyle="None"
+        AllowsTransparency="True"
+        WindowStartupLocation="CenterScreen">
     <Window.Resources>
         <Style TargetType="Label" x:Key="TextStyle">
             <Setter Property="HorizontalAlignment" Value="Center"/>
@@ -14,7 +16,6 @@
             <Setter Property="FontSize" Value="20"/>
             <Setter Property="FontFamily" Value="Luminari"/>
             <Setter Property="Foreground" Value="Black"/>
-            <Setter Property="Width" Value="auto"/>
         </Style>
 
         <Style TargetType="TextBox" x:Key="TextBoxStyle">
@@ -87,7 +88,7 @@
                 <ImageBrush ImageSource="/Pictures/17730.jpg"/>
             </Grid.Background>
             <Label Content="Sign Up" Style="{StaticResource TextStyle}" Margin="25,10,655,0" FontSize="26"/>
-            <Label Content="User Name" Style="{StaticResource TextStyle}" Margin="119,77,555,0"/>
+            <Label Content="User Name" Style="{StaticResource TextStyle}" Margin="110,77,572,0"/>
             <Label Content="E-mail address" Style="{StaticResource TextStyle}" Margin="98,151,544,0"/>
             <Label Content="Password" Style="{StaticResource TextStyle}" Margin="119,235,570,0"/>
             <TextBox x:Name="reg_Username" Style="{StaticResource TextBoxStyle}" Template="{StaticResource TextBoxBaseControlTemplate}" Margin="25,116,477,0" />

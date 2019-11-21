@@ -34,6 +34,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>cute-anime-chibi-neko-girl-png-cat-chibi-clipart-56d8501cd26470e5.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -58,6 +61,9 @@
     <Compile Include="Users\Login.xaml.cs">
       <DependentUpon>Login.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Users\SignUp.xaml.cs">
+      <DependentUpon>SignUp.xaml</DependentUpon>
+    </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -71,6 +77,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="Users\Login.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Users\SignUp.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -103,6 +113,16 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Pictures\17639.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Pictures\17730.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="cute-anime-chibi-neko-girl-png-cat-chibi-clipart-56d8501cd26470e5.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Pictures\Power.png" />
+    <Content Include="Pictures\power_symbol.svg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
