@@ -1,0 +1,14 @@
+C:\Users\baszd\codecool\Anime Store\Anime Store\bin\Debug\Anime Store.exe.config
+C:\Users\baszd\codecool\Anime Store\Anime Store\bin\Debug\Anime Store.exe
+C:\Users\baszd\codecool\Anime Store\Anime Store\bin\Debug\Anime Store.pdb
+C:\Users\baszd\codecool\Anime Store\Anime Store\obj\Debug\Anime Store.csprojAssemblyReference.cache
+C:\Users\baszd\codecool\Anime Store\Anime Store\obj\Debug\MainWindow.g.cs
+C:\Users\baszd\codecool\Anime Store\Anime Store\obj\Debug\App.g.cs
+C:\Users\baszd\codecool\Anime Store\Anime Store\obj\Debug\Anime Store_MarkupCompile.cache
+C:\Users\baszd\codecool\Anime Store\Anime Store\obj\Debug\Anime Store_MarkupCompile.lref
+C:\Users\baszd\codecool\Anime Store\Anime Store\obj\Debug\MainWindow.baml
+C:\Users\baszd\codecool\Anime Store\Anime Store\obj\Debug\Anime Store.g.resources
+C:\Users\baszd\codecool\Anime Store\Anime Store\obj\Debug\Anime_Store.Properties.Resources.resources
+C:\Users\baszd\codecool\Anime Store\Anime Store\obj\Debug\Anime Store.csproj.GenerateResource.cache
+C:\Users\baszd\codecool\Anime Store\Anime Store\obj\Debug\Anime Store.exe
+C:\Users\baszd\codecool\Anime Store\Anime Store\obj\Debug\Anime Store.pdb
