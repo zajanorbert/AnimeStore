@@ -40,6 +40,7 @@
         <Style TargetType="Button" x:Key="ButtonStyle">
             <Setter Property="HorizontalAlignment" Value="Center"/>
             <Setter Property="VerticalAlignment" Value="Top"/>
+            <Setter Property="Cursor" Value="Hand"/>
         </Style>
 
         <ControlTemplate x:Key="TextBoxBaseControlTemplate" TargetType="{x:Type TextBoxBase}">
@@ -101,7 +102,7 @@
             <Label Style="{StaticResource TextStyle}" x:Name="lbl_Title" Content="Login First" FontSize="26" FontWeight="Bold" Margin="19,10,622,0"/>
             <Label Style="{StaticResource TextStyle}" x:Name="lbl_UserName" Content="UserName" Margin="10,95,662,0" />
             <Label Style="{StaticResource TextStyle}" x:Name="lbl_Password" Content="Password" Margin="19,189,662,0"/>
-            <Label Style="{StaticResource TextStyle}" Content="Don't have an account? Registrate here: " Margin="10,396,416,0" Width="364"/>
+            <Label Style="{StaticResource TextStyle}" Content="Don't have an account? Register here: " Margin="10,396,416,0" Width="364"/>
 
             <TextBox x:Name="log_UserName" Style="{StaticResource TextBoxStyle}" Template="{StaticResource TextBoxBaseControlTemplate}" HorizontalAlignment="Center" Height="37" Width="278" VerticalAlignment="Top" Margin="125,95,379,0" FontSize="20"/>
 
