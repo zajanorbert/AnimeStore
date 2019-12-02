@@ -7,7 +7,41 @@
         mc:Ignorable="d"
         Title="Anime4every1" Height="564" Width="807.5"
         ResizeMode="CanResizeWithGrip">
+
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid VerticalAlignment="Top" Grid.Row="0">
+            <Button Style="{StaticResource ButtonStyle}" Template="{StaticResource ButtonTemplate}" Width="51" Height="51">
+                <StackPanel>
+                    <Image Source="/Pictures/home_logo.png"/>
+                </StackPanel>
+            </Button>
+            <Button/>
+                <Button/>
+                <Button/>
+                <Button/>
+                <Button/>
+        </Grid>
+
+        <Grid Grid.Row="1">
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="200"/>
+            </Grid.ColumnDefinitions>
+            <ScrollViewer Grid.Column="0">
+
+            </ScrollViewer>
+
+            <ScrollViewer Grid.Column="1">
+
+            </ScrollViewer>
+
+        </Grid>
+
     </Grid>
+
 </Window>

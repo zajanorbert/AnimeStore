@@ -28,7 +28,7 @@
 
             <PasswordBox x:Name="log_Password" Style="{StaticResource PswBoxStyle}" Template="{StaticResource PasswordBoxControlTemplate}" Height="38" Width="278" Margin="125,188,379,0" />
 
-            <Button x:Name="btn_Login" Style="{StaticResource ButtonStyle}" Content="Login" Template="{StaticResource ButtonTemplate}" Background="DeepPink" Width="115" Height="50" Margin="288,264,379,0"/>
+            <Button x:Name="btn_Login" Style="{StaticResource ButtonStyle}" Content="Login" Template="{StaticResource ButtonTemplate}" Background="DeepPink" Width="115" Height="50" Margin="288,264,379,0" Click="btn_Login_Click"/>
 
             <Button x:Name="btn_SignUp" Style="{StaticResource ButtonStyle}" Template="{StaticResource ButtonTemplate}" Content="SignUp" Width="116" Height="36" Background="DeepPink" Margin="374,396,300,0"/>
 

@@ -37,5 +37,11 @@ namespace Anime_Store.Users
             Application.Current.Shutdown();
         }
 
+        private void btn_Login_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow main = new MainWindow();
+            main.Show();
+            this.Close();
+        }
     }
 }
