@@ -24,5 +24,15 @@ namespace Anime_Store
         {
             InitializeComponent();
         }
+
+        private void AccountButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void LogoutButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
