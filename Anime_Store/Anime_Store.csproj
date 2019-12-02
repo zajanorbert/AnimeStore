@@ -123,6 +123,7 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Pictures\Power.png" />
+    <Resource Include="Pictures\home_logo.png" />
     <Content Include="Pictures\power_symbol.svg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

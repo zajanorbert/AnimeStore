@@ -5,23 +5,79 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Anime_Store"
         mc:Ignorable="d"
-        Title="Anime4every1" Height="385.633" Width="551.582"
-        ResizeMode="CanResizeWithGrip">
-    <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="309*"/>
-            <ColumnDefinition Width="235*"/>
-        </Grid.ColumnDefinitions>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="40"/>
-            <RowDefinition Height="203"/>
-        </Grid.RowDefinitions>
-        <TextBlock Text="Search" HorizontalAlignment="Stretch"
-                   VerticalAlignment="Bottom" Width="Auto" Height="16" Margin="165,0,0,4"/>
-        <TextBox HorizontalAlignment="Right" VerticalAlignment="Bottom"
-                   Height="25" Width="325" Margin="0,0,10,0" x:Name="Autotxt" TextWrapping="NoWrap" Grid.ColumnSpan="2"/>
-        <ListBox x:Name="lbSuggestion"
-                 Background="LightGray" Grid.Row="1" Visibility="Collapsed"
-                 HorizontalAlignment="Right" VerticalAlignment="Top" Width="325" Margin="0,0,10,0" Grid.ColumnSpan="2"/>
-    </Grid>
+        Title="Anime4every1" Height="950" Width="1600"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="CanResizeWithGrip"
+        >
+    <!--<Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="309*"/>
+                <ColumnDefinition Width="235*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="203"/>
+            </Grid.RowDefinitions>
+            
+        </Grid>-->
+
+
+    <Border Padding="10" Background="#FF2E2C2C">
+        <StackPanel Height="899" VerticalAlignment="Top" Background="#FF2E2C2C">
+            <!-- Account/Logout -->
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="18*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Button x:Name="LogInButton" Style="{StaticResource ButtonStyle}" Click="LogInButton_Click" Margin="10 0 5 0" Grid.Column="1" Content="Login"  BorderThickness="0" Background="{x:Null}" Foreground="White" />
+                <Button x:Name="AccountButton" Style="{StaticResource ButtonStyle}" Click="AccountButton_Click" Margin="10 0 5 0" Grid.Column="1" Content="Account" BorderThickness="0" Background="{x:Null}" Foreground="White" />
+                <Button x:Name="LogoutButton" Style="{StaticResource ButtonStyle}" Click="LogoutButton_Click"  Margin="5 0 10 0" Grid.Column="2" Content="Logout" BorderThickness="0" Background="{x:Null}" Foreground="White" />
+            </Grid>
+            <!-- Scrollview Selector -->
+            <Grid Height="45">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="4*" />
+                    <ColumnDefinition Width="3*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="3*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="3*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="3*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="5*" />
+
+                </Grid.ColumnDefinitions>
+                <Button x:Name="AnimeButton" Content="Anime" Style="{StaticResource ButtonStyle}" Template="{StaticResource ButtonTemplate}" Grid.Column="1" Height="42" Width="120" Background="#FF4DC932"/>
+                <Button x:Name="MangaButton" Content="Manga" Style="{StaticResource ButtonStyle}" Template="{StaticResource ButtonTemplate}" Grid.Column="3" Height="42" Width="120" Background="#FF4DC932"/>
+                <Button x:Name="MusicButton" Content="Music" Style="{StaticResource ButtonStyle}" Template="{StaticResource ButtonTemplate}" Grid.Column="5" Height="42" Width="120" Background="#FF4DC932"/>
+                <Button x:Name="LibaryButton" Content="Music" Style="{StaticResource ButtonStyle}" Template="{StaticResource ButtonTemplate}" Grid.Column="7" Height="42" Width="120" Background="#FF4DC932"/>
+
+                <TextBlock x:Name="SearchName" Text="Search" HorizontalAlignment="Right" FontSize="20" Grid.Column="8" Foreground="White" VerticalAlignment="Bottom"/>
+                <TextBox VerticalAlignment="Bottom" Padding="3" FontSize="18"
+                   Height="27"  x:Name="Autotxt" TextWrapping="NoWrap" Grid.Column="9"/>
+                <ListBox x:Name="lbSuggestion"
+                 Background="LightGray" Visibility="Collapsed" Margin="0" Grid.Column="9" VerticalAlignment="Bottom"/>
+            </Grid>
+            <!-- Scroll windows-->
+            <Grid MinHeight="800" RenderTransformOrigin="0.5,0.5">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="4*" />
+                    <ColumnDefinition Width="1*" />
+                </Grid.ColumnDefinitions>
+
+                <ScrollViewer Grid.Column="0">
+
+                </ScrollViewer>
+                <ScrollViewer Grid.Column="1">
+
+                </ScrollViewer>
+            </Grid>
+            <Grid>
+
+            </Grid>
+        </StackPanel>
+    </Border>
 </Window>

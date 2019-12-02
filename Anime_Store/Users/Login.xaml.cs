@@ -34,8 +34,14 @@ namespace Anime_Store.Users
 
         private void ExitButton_Click(object sender, RoutedEventArgs e)
         {
-            Application.Current.Shutdown();
+            //Application.Current.Shutdown();
+            this.Close();
         }
 
+        private void btn_Login_Click(object sender, RoutedEventArgs e)
+        {
+            
+            this.Close();
+        }
     }
 }
