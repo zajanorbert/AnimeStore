@@ -19,7 +19,8 @@
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
-                <Button x:Name="AccountButton" Style="{StaticResource ButtonStyle}" Click="AccountButton_Click" Margin="10 0 5 0" Grid.Column="1" Content="Login" BorderThickness="0" Background="{x:Null}" Foreground="White" />
+                <Button x:Name="LogInButton" Style="{StaticResource ButtonStyle}" Click="LogInButton_Click" Margin="10 0 5 0" Grid.Column="1" Content="Login"  BorderThickness="0" Background="{x:Null}" Foreground="White" />
+                <Button x:Name="AccountButton" Style="{StaticResource ButtonStyle}" Click="AccountButton_Click" Margin="10 0 5 0" Grid.Column="1" Content="Account" BorderThickness="0" Background="{x:Null}" Foreground="White" />
                 <Button x:Name="LogoutButton" Style="{StaticResource ButtonStyle}" Click="LogoutButton_Click"  Margin="5 0 10 0" Grid.Column="2" Content="Logout" BorderThickness="0" Background="{x:Null}" Foreground="White" />
             </Grid>
             <!-- Scrollview Selector -->

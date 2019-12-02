@@ -25,28 +25,37 @@ namespace Anime_Store
         {
             InitializeComponent();
             LogoutButton.Visibility = Visibility.Hidden;
-            
+            AccountButton.Visibility = Visibility.Hidden;
+            LogInButton.Visibility = Visibility.Visible;
+
+
         }
 
         private void AccountButton_Click(object sender, RoutedEventArgs e)
         {
-            login = new Users.Login();
-            login.Show();
-            login.Closed += Login_Closed;
+            
         }
 
         private void Login_Closed(object sender, EventArgs e)
         {
             LogoutButton.Visibility = Visibility.Visible;
+            AccountButton.Visibility = Visibility.Visible;
+            LogInButton.Visibility = Visibility.Hidden;
             AccountButton.Content = login.log_UserName.Text;
-            AccountButton.Click -= AccountButton_Click;
         }
 
         private void LogoutButton_Click(object sender, RoutedEventArgs e)
         {
             LogoutButton.Visibility = Visibility.Hidden;
-            AccountButton.Content = "Login";
-            AccountButton.Click += AccountButton_Click;
+            AccountButton.Visibility = Visibility.Hidden;
+            LogInButton.Visibility = Visibility.Visible;
+        }
+
+        private void LogInButton_Click(object sender, RoutedEventArgs e)
+        {
+            login = new Users.Login();
+            login.Show();
+            login.Closed += Login_Closed;
         }
     }
 }
