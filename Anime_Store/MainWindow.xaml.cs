@@ -48,5 +48,10 @@ namespace Anime_Store
             AccountButton.Content = "Login";
             AccountButton.Click += AccountButton_Click;
         }
+
+        private void SetTitleBarBackground()
+        {
+           
+        }
     }
 }

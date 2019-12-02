@@ -7,8 +7,7 @@
         mc:Ignorable="d"
         Title="Anime4every1" Height="950" Width="1600"
         WindowStartupLocation="CenterScreen"
-        ResizeMode="CanResizeWithGrip"
-        >
+        ResizeMode="CanResizeWithGrip">
 
     <Border Padding="10" Background="#FF2E2C2C">
         <StackPanel Height="899" VerticalAlignment="Top" Background="#FF2E2C2C">
