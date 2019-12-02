@@ -20,9 +20,23 @@ namespace Anime_Store
     /// </summary>
     public partial class MainWindow : Window
     {
+        
         public MainWindow()
         {
-            InitializeComponent();
+            InitializeComponent();            
+            sendAutoText();
+            Autotxt.TextChanged += Search.Autotxt_TextChanged;
+            lbSuggestion.SelectionChanged += Search.lbSuggestion_SelectionChanged;
         }
+
+        /// <summary>
+        /// Sends the text information for the Search class.
+        /// </summary>
+        private void sendAutoText()
+        {
+            Search.getAutoText(Autotxt, lbSuggestion);
+        }
+
+
     }
 }

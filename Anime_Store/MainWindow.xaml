@@ -5,9 +5,23 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Anime_Store"
         mc:Ignorable="d"
-        Title="Anime4every1" Height="564" Width="807.5"
+        Title="Anime4every1" Height="385.633" Width="551.582"
         ResizeMode="CanResizeWithGrip">
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="309*"/>
+            <ColumnDefinition Width="235*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="203"/>
+        </Grid.RowDefinitions>
+        <TextBlock Text="Search" HorizontalAlignment="Stretch"
+                   VerticalAlignment="Bottom" Width="Auto" Height="16" Margin="165,0,0,4"/>
+        <TextBox HorizontalAlignment="Right" VerticalAlignment="Bottom"
+                   Height="25" Width="325" Margin="0,0,10,0" x:Name="Autotxt" TextWrapping="NoWrap" Grid.ColumnSpan="2"/>
+        <ListBox x:Name="lbSuggestion"
+                 Background="LightGray" Grid.Row="1" Visibility="Collapsed"
+                 HorizontalAlignment="Right" VerticalAlignment="Top" Width="325" Margin="0,0,10,0" Grid.ColumnSpan="2"/>
     </Grid>
 </Window>
