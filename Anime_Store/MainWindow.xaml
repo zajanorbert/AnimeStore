@@ -7,7 +7,8 @@
         mc:Ignorable="d"
         Title="Anime4every1" Height="950" Width="1600"
         WindowStartupLocation="CenterScreen"
-        ResizeMode="CanResizeWithGrip">
+        ResizeMode="CanResizeWithGrip"
+        >
 
     <Border Padding="10" Background="#FF2E2C2C">
         <StackPanel Height="899" VerticalAlignment="Top" Background="#FF2E2C2C">
@@ -18,7 +19,7 @@
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
-                <Button x:Name="AccountButton" Style="{StaticResource ButtonStyle}" Click="AccountButton_Click" Margin="10 0 5 0" Grid.Column="1" Content="Account" BorderThickness="0" Background="{x:Null}" Foreground="White" />
+                <Button x:Name="AccountButton" Style="{StaticResource ButtonStyle}" Click="AccountButton_Click" Margin="10 0 5 0" Grid.Column="1" Content="Login" BorderThickness="0" Background="{x:Null}" Foreground="White" />
                 <Button x:Name="LogoutButton" Style="{StaticResource ButtonStyle}" Click="LogoutButton_Click"  Margin="5 0 10 0" Grid.Column="2" Content="Logout" BorderThickness="0" Background="{x:Null}" Foreground="White" />
             </Grid>
             <!-- Scrollview Selector -->

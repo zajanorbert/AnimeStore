@@ -24,7 +24,7 @@
             <Label Style="{StaticResource TextStyle}" x:Name="lbl_Password" Content="Password" Margin="19,189,662,0" Foreground="White"/>
             <Label Style="{StaticResource TextStyle}" Content="Don't have an account? Register here: " Margin="10,396,416,0" Width="364" Foreground="White"/>
 
-            <TextBox x:Name="log_UserName" Style="{StaticResource TextBoxStyle}" Template="{StaticResource TextBoxBaseControlTemplate}" HorizontalAlignment="Center" Height="37" Width="278" VerticalAlignment="Top" Margin="125,95,379,0" FontSize="20"/>
+            <TextBox x:Name="log_UserName" Style="{StaticResource TextBoxStyle}" Template="{StaticResource TextBoxBaseControlTemplate}" HorizontalAlignment="Center" Height="37" Width="278" VerticalAlignment="Top" Margin="125,95,379,0" FontSize="20" />
 
             <PasswordBox x:Name="log_Password" Style="{StaticResource PswBoxStyle}" Template="{StaticResource PasswordBoxControlTemplate}" Height="38" Width="278" Margin="125,188,379,0" />
 
