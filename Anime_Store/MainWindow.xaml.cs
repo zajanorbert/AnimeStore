@@ -36,7 +36,9 @@ namespace Anime_Store
 
         private void AccountButton_Click(object sender, RoutedEventArgs e)
         {
-            
+            AccountWindow account = new AccountWindow();
+            account.Show();
+            this.Hide();
         }
 
         private void Login_Closed(object sender, EventArgs e)

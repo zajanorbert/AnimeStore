@@ -8,21 +8,8 @@
         Title="Anime4every1" MinHeight="600" MinWidth="1010" Height="768" Width="1366"
         WindowStartupLocation="CenterScreen"
         ResizeMode="CanResizeWithGrip">
-    <!--<Grid>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="309*"/>
-                <ColumnDefinition Width="235*"/>
-            </Grid.ColumnDefinitions>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="40"/>
-                <RowDefinition Height="203"/>
-            </Grid.RowDefinitions>
-            
-        </Grid>-->
-
-
     <Border Padding="10" Background="#FF2E2C2C">
-        <StackPanel Height="750" VerticalAlignment="Top" Background="#FF2E2C2C">
+        <StackPanel Background="#FF2E2C2C">
             <!-- Account/Logout -->
             <Grid>
                 <Grid.ColumnDefinitions>
