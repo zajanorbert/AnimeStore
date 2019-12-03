@@ -5,20 +5,52 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Anime_Store"
         mc:Ignorable="d"
-        Title="AccountWindow" MinHeight="600" MinWidth="1010" Height="768" Width="1366"
+        Title="AccountWindow" MinHeight="600" MinWidth="1010" Height="768" Width="768"
         WindowStartupLocation="CenterScreen"
         ResizeMode="CanResizeWithGrip">
-    <Border Padding="10" Background="#FF2E2C2C">
-        <StackPanel Background="#FF2E2C2C">
+    <Border Padding="10" Background="#FF1D1B1B">
+        <Grid Background="#FF1D1B1B">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1.5*"/>
+                <RowDefinition Height="0.5*"/>
+                <RowDefinition Height="15*"/>
+                
+            </Grid.RowDefinitions>
             <!-- Back to Menu / Save -->
-            <Grid>
+            <Grid Margin="0 10 0 0" Grid.Row="0">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="2*"/>
                     <ColumnDefinition Width="4*"/>
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
                 <Button x:Name="BackToMenuButton" Content="Back To Menu" Style="{StaticResource ButtonStyle}" Template="{StaticResource ButtonTemplate}" Grid.Column="0" Height="42" Width="120" Background="#FF4DC932" HorizontalAlignment="Left" Click="BackToMenuButton_Click"/>
+                <Button x:Name="SaveButton" Content="Save" Style="{StaticResource ButtonStyle}" Template="{StaticResource ButtonTemplate}" Grid.Column="2" Height="42" Width="100" Background="#FF4DC932" HorizontalAlignment="Right" Click="SaveButton_Click"/>
             </Grid>
-        </StackPanel>
+            <!-- Green Textboxes -->
+            <Grid Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="4*"/>
+                </Grid.ColumnDefinitions>
+                <TextBlock Padding="15,0,0,0" Text="Setting" Background="#FF4DC932" FontWeight="Bold" OpacityMask="#FF4DC932" Grid.Column="0"/>
+                <TextBlock x:Name="AccountGreentexblock" Padding="15,0,0,0" Text="Profil" Background="#FF4DC932" FontWeight="Bold" OpacityMask="#FF4DC932" Grid.Column="1"/>
+            </Grid>
+            <!-- Setting changer/Setting Window-->
+
+            <Grid Grid.Row="2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="4*" />
+                </Grid.ColumnDefinitions>
+                <!-- Setting Changer-->
+                <StackPanel Grid.Column="0">
+
+                </StackPanel>
+                <!-- Setting Window-->
+                <StackPanel Grid.Column="1" Background="#FF2E2C2C">
+
+                </StackPanel>
+            </Grid>
+        </Grid>
     </Border>
 </Window>

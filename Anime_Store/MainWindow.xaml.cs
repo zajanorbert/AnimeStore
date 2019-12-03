@@ -38,7 +38,7 @@ namespace Anime_Store
         {
             AccountWindow account = new AccountWindow();
             account.Show();
-            this.Hide();
+            
         }
 
         private void Login_Closed(object sender, EventArgs e)

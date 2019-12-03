@@ -8,9 +8,9 @@
         Title="Anime4every1" MinHeight="600" MinWidth="1010" Height="768" Width="1366"
         WindowStartupLocation="CenterScreen"
         ResizeMode="CanResizeWithGrip">
-    <Border Padding="10" Background="#FF2E2C2C">
-        <StackPanel Background="#FF2E2C2C">
-            <!-- Account/Logout -->
+    <Border Padding="10" Background="#FF1D1B1B">
+        <StackPanel Background="#FF1D1B1B">
+            <!-- Account/Logout/Login -->
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="18*"/>
@@ -22,8 +22,8 @@
                 <Button x:Name="AccountButton" Style="{StaticResource ButtonStyle}" Click="AccountButton_Click" Margin="10 0 5 0" Grid.Column="1" Content="Account" BorderThickness="0" Background="{x:Null}" Foreground="White" />
                 <Button x:Name="LogoutButton" Style="{StaticResource ButtonStyle}" Click="LogoutButton_Click"  Margin="5 0 10 0" Grid.Column="2" Content="Logout" BorderThickness="0" Background="{x:Null}" Foreground="White" />
             </Grid>
-            <!-- Scrollview Selector -->
-            <Grid Height="45">
+            <!-- Home/Anime/Manga/Music/Libary Buttons -->
+            <Grid Height="45" Margin="0 0 0 32">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="4*" />
                     <ColumnDefinition Width="3*" />
@@ -35,21 +35,22 @@
                     <ColumnDefinition Width="3*" />
                     <ColumnDefinition Width="1.3*" />
                     <ColumnDefinition Width="5*" />
-
                 </Grid.ColumnDefinitions>
-                <Button x:Name="HomeButton" Background="Transparent" Height="100" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="50,-20,0,-35" BorderBrush="Transparent">
+                
+                <Button x:Name="HomeButton" Background="Transparent" Height="120" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="46,-26,0,-49" BorderBrush="Transparent">
                     <Image Source="/Pictures/home_logo.png"/>
                 </Button>
                 <Button x:Name="AnimeButton" Content="Anime" Style="{StaticResource ButtonStyle}" Template="{StaticResource ButtonTemplate}" Grid.Column="1" Height="42" Width="120" Background="#FF4DC932"/>
                 <Button x:Name="MangaButton" Content="Manga" Style="{StaticResource ButtonStyle}" Template="{StaticResource ButtonTemplate}" Grid.Column="3" Height="42" Width="120" Background="#FF4DC932"/>
                 <Button x:Name="MusicButton" Content="Music" Style="{StaticResource ButtonStyle}" Template="{StaticResource ButtonTemplate}" Grid.Column="5" Height="42" Width="120" Background="#FF4DC932"/>
-                <Button x:Name="LibaryButton" Content="Music" Style="{StaticResource ButtonStyle}" Template="{StaticResource ButtonTemplate}" Grid.Column="7" Height="42" Width="120" Background="#FF4DC932"/>
-
+                <Button x:Name="LibaryButton" Content="Libary" Style="{StaticResource ButtonStyle}" Template="{StaticResource ButtonTemplate}" Grid.Column="7" Height="42" Width="120" Background="#FF4DC932"/>
+                
+                <!-- Search -->
                 <TextBlock x:Name="SearchName" Text="Search" HorizontalAlignment="Right" FontSize="20" Grid.Column="8" Foreground="White" VerticalAlignment="Bottom"/>
                 <TextBox VerticalAlignment="Bottom" Padding="3" FontSize="18"  Height="27"  x:Name="Autotxt" TextWrapping="NoWrap" Grid.Column="9"/>
                 <ListBox x:Name="lbSuggestion" Background="LightGray" Visibility="Collapsed" Margin="0" Grid.Column="9" VerticalAlignment="Bottom"/>
             </Grid>
-            <TextBlock Height="32" />
+            <!-- Green Textboxes -->
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="4*"/>
@@ -61,14 +62,14 @@
             </Grid>
 
             <!-- Scroll windows-->
-            <Grid MinHeight="578"  RenderTransformOrigin="0.5,0.5">
+            <Grid MinHeight="578"  RenderTransformOrigin="0.5,0.5" Height="589" ScrollViewer.VerticalScrollBarVisibility="Hidden">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="4*" />
                     <ColumnDefinition Width="1*" />
                 </Grid.ColumnDefinitions>
 
-                <ScrollViewer Grid.Column="0" x:Name="MainThumbnail" Margin="0,0,0,0">
-                    <Grid Height="578" Margin="5,0,5,5">
+                <ScrollViewer Grid.Column="0" x:Name="MainThumbnail" Margin="0,0,0,0" VerticalScrollBarVisibility="Auto">
+                    <Grid Height="578" Margin="5,0,5,5" Background="#FF2E2C2C">
                         <Grid.ColumnDefinitions >
                             <ColumnDefinition Width="*" />
                             <ColumnDefinition Width="*"/>
@@ -96,9 +97,7 @@
                     </Grid>
 
                 </ScrollViewer>
-                <ScrollViewer Grid.Column="1">
-
-                </ScrollViewer>
+                <ScrollViewer Grid.Column="1" VerticalScrollBarVisibility="Auto"/>
             </Grid>
             <Grid>
 

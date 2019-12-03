@@ -26,9 +26,12 @@ namespace Anime_Store
 
         private void BackToMenuButton_Click(object sender, RoutedEventArgs e)
         {
-            MainWindow main = new MainWindow();
-            main.Show();
             this.Hide();
+        }
+
+        private void SaveButton_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
