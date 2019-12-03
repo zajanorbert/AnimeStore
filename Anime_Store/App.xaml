@@ -10,7 +10,6 @@
             <Setter Property="VerticalAlignment" Value="Top"/>
             <Setter Property="FontSize" Value="20"/>
             <Setter Property="FontFamily" Value="Luminari"/>
-            <Setter Property="Foreground" Value="Black"/>
         </Style>
 
         <Style TargetType="TextBox" x:Key="TextBoxStyle">
