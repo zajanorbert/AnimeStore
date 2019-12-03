@@ -22,7 +22,7 @@
 
 
     <Border Padding="10" Background="#FF2E2C2C">
-        <StackPanel Height="750" VerticalAlignment="Top" Background="#FF2E2C2C">
+        <StackPanel Height="717" VerticalAlignment="Top" Background="#FF2E2C2C">
             <!-- Account/Logout -->
             <Grid>
                 <Grid.ColumnDefinitions>
@@ -59,20 +59,55 @@
                 <Button x:Name="LibaryButton" Content="Music" Style="{StaticResource ButtonStyle}" Template="{StaticResource ButtonTemplate}" Grid.Column="7" Height="42" Width="120" Background="#FF4DC932"/>
 
                 <TextBlock x:Name="SearchName" Text="Search" HorizontalAlignment="Right" FontSize="20" Grid.Column="8" Foreground="White" VerticalAlignment="Bottom"/>
-                <TextBox VerticalAlignment="Bottom" Padding="3" FontSize="18"
-                   Height="27"  x:Name="Autotxt" TextWrapping="NoWrap" Grid.Column="9"/>
-                <ListBox x:Name="lbSuggestion"
-                 Background="LightGray" Visibility="Collapsed" Margin="0" Grid.Column="9" VerticalAlignment="Bottom"/>
+                <TextBox VerticalAlignment="Bottom" Padding="3" FontSize="18"  Height="27"  x:Name="Autotxt" TextWrapping="NoWrap" Grid.Column="9"/>
+                <ListBox x:Name="lbSuggestion" Background="LightGray" Visibility="Collapsed" Margin="0" Grid.Column="9" VerticalAlignment="Bottom"/>
             </Grid>
+            <TextBlock Height="32" />
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="4*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+            <TextBlock Padding="15,0,0,0" Text="ANIME" Background="#FF4DC932" FontWeight="Bold" OpacityMask="#FF4DC932" Grid.Column="0"/>
+            <TextBlock Padding="15,0,0,0" Text="GENRE" Background="#FF4DC932" FontWeight="Bold" OpacityMask="#FF4DC932" Grid.Column="1"/>
+                
+            </Grid>
+            
             <!-- Scroll windows-->
-            <Grid MinHeight="600" RenderTransformOrigin="0.5,0.5">
+            <Grid MinHeight="578"  RenderTransformOrigin="0.5,0.5">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="4*" />
                     <ColumnDefinition Width="1*" />
                 </Grid.ColumnDefinitions>
+                
+                <ScrollViewer Grid.Column="0" x:Name="MainThumbnail" Margin="0,0,0,0">
+                    <Grid Height="578" Margin="5,0,5,5">
+                        <Grid.ColumnDefinitions >
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="0.5*"/>
+                            <RowDefinition Height="6*"/>
+                            <RowDefinition Height="0.5*"/>
+                            <RowDefinition Height="0.5*"/>
+                            <RowDefinition Height="6*"/>
+                            <RowDefinition Height="0.5*"/>
+                            <RowDefinition Height="0.5*"/>
 
-                <ScrollViewer Grid.Column="0">
+                        </Grid.RowDefinitions>
 
+                        
+                        
+                        <Image Source="https://cdnimg.xyz/cover/bosco-daibouken.png" Grid.Column="0" Grid.Row="1"/>
+                        <Label Content="Bosco Daibouken" FontSize="14" Grid.Row="2" Grid.Column="0"/>
+                        <Image Source="https://cdnimg.xyz/cover/bosco-daibouken.png" Grid.Column="0" Grid.Row="4"/>
+                        
+                        
+                    </Grid>
+                    
                 </ScrollViewer>
                 <ScrollViewer Grid.Column="1">
 
