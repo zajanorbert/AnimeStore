@@ -30,7 +30,7 @@
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
-                
+
                 <Button x:Name="LogInButton" Style="{StaticResource ButtonStyle}" Click="LogInButton_Click" Margin="10 0 5 0" Grid.Column="1" Content="Login"  BorderThickness="0" Background="{x:Null}" Foreground="White" />
                 <Button x:Name="AccountButton" Style="{StaticResource ButtonStyle}" Click="AccountButton_Click" Margin="10 0 5 0" Grid.Column="1" Content="Account" BorderThickness="0" Background="{x:Null}" Foreground="White" />
                 <Button x:Name="LogoutButton" Style="{StaticResource ButtonStyle}" Click="LogoutButton_Click"  Margin="5 0 10 0" Grid.Column="2" Content="Logout" BorderThickness="0" Background="{x:Null}" Foreground="White" />
@@ -68,18 +68,18 @@
                     <ColumnDefinition Width="4*"/>
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
-            <TextBlock Padding="15,0,0,0" Text="ANIME" Background="#FF4DC932" FontWeight="Bold" OpacityMask="#FF4DC932" Grid.Column="0"/>
-            <TextBlock Padding="15,0,0,0" Text="GENRE" Background="#FF4DC932" FontWeight="Bold" OpacityMask="#FF4DC932" Grid.Column="1"/>
-                
+                <TextBlock Padding="15,0,0,0" Text="ANIME" Background="#FF4DC932" FontWeight="Bold" OpacityMask="#FF4DC932" Grid.Column="0"/>
+                <TextBlock Padding="15,0,0,0" Text="GENRE" Background="#FF4DC932" FontWeight="Bold" OpacityMask="#FF4DC932" Grid.Column="1"/>
+
             </Grid>
-            
+
             <!-- Scroll windows-->
             <Grid MinHeight="578"  RenderTransformOrigin="0.5,0.5">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="4*" />
                     <ColumnDefinition Width="1*" />
                 </Grid.ColumnDefinitions>
-                
+
                 <ScrollViewer Grid.Column="0" x:Name="MainThumbnail" Margin="0,0,0,0">
                     <Grid Height="578" Margin="5,0,5,5">
                         <Grid.ColumnDefinitions >
@@ -99,15 +99,15 @@
 
                         </Grid.RowDefinitions>
 
-                        
-                        
+
+
                         <Image Source="https://cdnimg.xyz/cover/bosco-daibouken.png" Grid.Column="0" Grid.Row="1"/>
-                        <Label Content="Bosco Daibouken" FontSize="14" Grid.Row="2" Grid.Column="0"/>
+                        <Label Padding="0" HorizontalAlignment="Center" VerticalAlignment="Center" Content="Bosco Daibouken" FontSize="14" Grid.Row="2" Grid.Column="0" Height="20" Margin="72,0,71,0"/>
                         <Image Source="https://cdnimg.xyz/cover/bosco-daibouken.png" Grid.Column="0" Grid.Row="4"/>
-                        
-                        
+
+
                     </Grid>
-                    
+
                 </ScrollViewer>
                 <ScrollViewer Grid.Column="1">
 
