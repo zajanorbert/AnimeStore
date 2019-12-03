@@ -5,12 +5,24 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Anime_Store"
         mc:Ignorable="d"
-        Title="Anime4every1" Height="950" Width="1600"
+        Title="Anime4every1" MinHeight="600" MinWidth="1010" Height="768" Width="1366"
         WindowStartupLocation="CenterScreen"
         ResizeMode="CanResizeWithGrip">
+    <!--<Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="309*"/>
+                <ColumnDefinition Width="235*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="203"/>
+            </Grid.RowDefinitions>
+            
+        </Grid>-->
+
 
     <Border Padding="10" Background="#FF2E2C2C">
-        <StackPanel Height="899" VerticalAlignment="Top" Background="#FF2E2C2C">
+        <StackPanel Height="750" VerticalAlignment="Top" Background="#FF2E2C2C">
             <!-- Account/Logout -->
             <Grid>
                 <Grid.ColumnDefinitions>
@@ -18,6 +30,7 @@
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
+                
                 <Button x:Name="LogInButton" Style="{StaticResource ButtonStyle}" Click="LogInButton_Click" Margin="10 0 5 0" Grid.Column="1" Content="Login"  BorderThickness="0" Background="{x:Null}" Foreground="White" />
                 <Button x:Name="AccountButton" Style="{StaticResource ButtonStyle}" Click="AccountButton_Click" Margin="10 0 5 0" Grid.Column="1" Content="Account" BorderThickness="0" Background="{x:Null}" Foreground="White" />
                 <Button x:Name="LogoutButton" Style="{StaticResource ButtonStyle}" Click="LogoutButton_Click"  Margin="5 0 10 0" Grid.Column="2" Content="Logout" BorderThickness="0" Background="{x:Null}" Foreground="White" />
@@ -33,17 +46,26 @@
                     <ColumnDefinition Width="3*" />
                     <ColumnDefinition Width="*" />
                     <ColumnDefinition Width="3*" />
-                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="1.3*" />
                     <ColumnDefinition Width="5*" />
+
                 </Grid.ColumnDefinitions>
+                <Button x:Name="HomeButton" Background="Transparent" Height="100" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="50,-20,0,-35" BorderBrush="Transparent">
+                    <Image Source="/Pictures/home_logo.png"/>
+                </Button>
                 <Button x:Name="AnimeButton" Content="Anime" Style="{StaticResource ButtonStyle}" Template="{StaticResource ButtonTemplate}" Grid.Column="1" Height="42" Width="120" Background="#FF4DC932"/>
                 <Button x:Name="MangaButton" Content="Manga" Style="{StaticResource ButtonStyle}" Template="{StaticResource ButtonTemplate}" Grid.Column="3" Height="42" Width="120" Background="#FF4DC932"/>
                 <Button x:Name="MusicButton" Content="Music" Style="{StaticResource ButtonStyle}" Template="{StaticResource ButtonTemplate}" Grid.Column="5" Height="42" Width="120" Background="#FF4DC932"/>
                 <Button x:Name="LibaryButton" Content="Music" Style="{StaticResource ButtonStyle}" Template="{StaticResource ButtonTemplate}" Grid.Column="7" Height="42" Width="120" Background="#FF4DC932"/>
-                <Label Content="SEARCH SAMPLE" FontWeight="Bold" Grid.Column="9" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Background="#FFF3FF00" FontSize="18" />
+
+                <TextBlock x:Name="SearchName" Text="Search" HorizontalAlignment="Right" FontSize="20" Grid.Column="8" Foreground="White" VerticalAlignment="Bottom"/>
+                <TextBox VerticalAlignment="Bottom" Padding="3" FontSize="18"
+                   Height="27"  x:Name="Autotxt" TextWrapping="NoWrap" Grid.Column="9"/>
+                <ListBox x:Name="lbSuggestion"
+                 Background="LightGray" Visibility="Collapsed" Margin="0" Grid.Column="9" VerticalAlignment="Bottom"/>
             </Grid>
             <!-- Scroll windows-->
-            <Grid MinHeight="800" RenderTransformOrigin="0.5,0.5">
+            <Grid MinHeight="600" RenderTransformOrigin="0.5,0.5">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="4*" />
                     <ColumnDefinition Width="1*" />

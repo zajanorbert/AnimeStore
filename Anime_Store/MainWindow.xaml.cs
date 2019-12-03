@@ -27,7 +27,10 @@ namespace Anime_Store
             LogoutButton.Visibility = Visibility.Hidden;
             AccountButton.Visibility = Visibility.Hidden;
             LogInButton.Visibility = Visibility.Visible;
-
+            sendAutoText();
+            Autotxt.TextChanged += Search.Autotxt_TextChanged;
+            lbSuggestion.SelectionChanged += Search.lbSuggestion_SelectionChanged;
+            
 
         }
 
@@ -58,9 +61,13 @@ namespace Anime_Store
             login.Closed += Login_Closed;
         }
 
-        private void SetTitleBarBackground()
+        /// <summary>
+        /// Sends the text information for the Search class.
+        /// </summary>
+        private void sendAutoText()
         {
-           
+            Search.getAutoText(Autotxt, lbSuggestion);
         }
+
     }
 }
