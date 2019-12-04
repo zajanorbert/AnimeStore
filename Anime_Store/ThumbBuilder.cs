@@ -10,8 +10,8 @@ namespace Anime_Store
 {
     class ThumbBuilder : MainWindow
     {
-        private List<Thumbnail> tempThumb = new List<Thumbnail>() 
-        { 
+        private List<Thumbnail> tempThumb = new List<Thumbnail>()
+        {
             new Thumbnail("https://cdnimg.xyz/images/anime/One-piece.jpg", "One Piece"),
             new Thumbnail("https://cdnimg.xyz/cover/sword-art-online-alicization-war-of-underworld.png", "Sword Art Online"),
             new Thumbnail("https://cdnimg.xyz/cover/vinland-saga.png", "Vinland Saga"),
@@ -29,7 +29,7 @@ namespace Anime_Store
 
         public ThumbBuilder()
         {
-            
+
         }
 
         /// <summary>
@@ -37,9 +37,9 @@ namespace Anime_Store
         /// </summary>
         public void elementBuilder()
         {
-          
 
-            
+
+
 
         }
 
