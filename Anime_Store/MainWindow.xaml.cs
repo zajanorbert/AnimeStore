@@ -72,6 +72,10 @@ namespace Anime_Store
         {
             Search.getAutoText(Autotxt, lbSuggestion);
         }
+        public void AnimeinfoButton_Click(object sender, RoutedEventArgs e)
+        {
+            DataContext = new AnimeInfoViewModel();
+        }
 
         private void AnimeButton_Click(object sender, RoutedEventArgs e)
         {

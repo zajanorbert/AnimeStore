@@ -41,7 +41,7 @@
                         <Image Source="https://cdnimg.xyz/cover/bosco-daibouken.png" MaxHeight="330" />
                     </StackPanel>
                 </Button>
-                <Button Style="{StaticResource ButtonStyleSimpleHoverEffect} "Click="AnimeButton_Click" Padding="0"  MinHeight="16" Grid.Row="2" Grid.Column="0" Margin=" 0,0,0,20"   Background="Transparent" BorderBrush="Transparent">
+                <Button Style="{StaticResource ButtonStyleSimpleHoverEffect}" Click="AnimeButton_Click" Padding="0"  MinHeight="16" Grid.Row="2" Grid.Column="0" Margin=" 0,0,0,20"   Background="Transparent" BorderBrush="Transparent">
                     <Label Content="Bosco Daibouken" FontSize="17" FontWeight="Bold" Style="{StaticResource GoldToGreenHoverColor}"/>
                 </Button>
 
