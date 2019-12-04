@@ -78,8 +78,9 @@
                     <ColumnDefinition Width="4*"/>
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
+                
                 <ScrollViewer Grid.Column="0" x:Name="MainThumbnail" Margin="0,0,0,0" VerticalScrollBarVisibility="Auto">
-                    <Grid Background="{StaticResource GreyColor}" Height="706">
+                    <Grid   Background="{StaticResource GreyColor}" Height="706">
                         <Grid.RowDefinitions>
                             <RowDefinition Height="12*"/>
                             <RowDefinition Height="0.5*"/>
@@ -99,8 +100,9 @@
                                 <Label  Foreground="{StaticResource LimeGreenColor}" FontWeight="Bold">Plot Summary:</Label>
                                 <TextBlock TextWrapping="Wrap" HorizontalAlignment="Left" Text=" Based on the book by Tony Wolf. The Fountain of Life is the source of all life forces in the Bosco World. Princess Apricot, who is supposed to become Queen of Fountainland-the Guardian of the Fountain of Life-is kidnapped by villains who aim to rule the Bosco World. If Princess Apricot can't take the queen's throne by the next solar eclipse, the Fountain of Life will dry up. The animals living in the forest of Bosco, including Frog, Otter and Tortoise, decide to help Princess and take her to Fountainland in order to protect their peaceful life in the Bosco World. So begins the journey in a balloon full of dreams, hope, adventures, and love!"/>
                                 <Label  Foreground="{StaticResource LimeGreenColor}" FontWeight="Bold">Genre:</Label>
-                                <TextBlock TextWrapping="Wrap" HorizontalAlignment="Left" Text="Adventure"/>
-
+                                <Button Background="Transparent" Foreground="Red" HorizontalAlignment="Left">Adventure</Button>
+                                <Label  Foreground="{StaticResource LimeGreenColor}" FontWeight="Bold">Released:</Label>
+                                <TextBlock TextWrapping="Wrap" HorizontalAlignment="Left" Text="1986"/>
                             </StackPanel>
                         </Grid>
                     </Grid>
