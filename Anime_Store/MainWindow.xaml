@@ -9,37 +9,7 @@
         WindowStartupLocation="CenterScreen"
         ResizeMode="CanResizeWithGrip">
     <Window.Resources>
-        <Style x:Key="ButtonStyleSimpleHoverEffect" TargetType="Button">
-            <Setter Property="OverridesDefaultStyle" Value="True"/>
-            <Setter Property="Margin" Value="5"/>
-            <Setter Property="Template">
-                <Setter.Value>
-                    <ControlTemplate TargetType="Button">
-                        <Border Name="border" 
-                            BorderThickness="1"
-                            BorderBrush="transparent" 
-                            CornerRadius="3" 
-                            Background="{TemplateBinding Background}">
-                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
-                        </Border>
-                        <ControlTemplate.Triggers>
-                            <Trigger Property="IsMouseOver" Value="True">
-                                <Setter TargetName="border" Property="BorderBrush" Value="transparent" />
-                                <Setter Property="Cursor" Value="Hand"/>
-                            </Trigger>
-                        </ControlTemplate.Triggers>
-                    </ControlTemplate>
-                </Setter.Value>
-            </Setter>
-        </Style>
-        <Style TargetType="Label" x:Key="GoldToGreenHoverColor">
-            <Setter Property="Foreground" Value="{StaticResource GoldColor}" />
-            <Style.Triggers>
-                <Trigger Property="IsMouseOver" Value="True">
-                    <Setter Property="Foreground" Value="{StaticResource LimeGreenColor}"/>
-                </Trigger>
-            </Style.Triggers>
-        </Style>
+        
     </Window.Resources>
     <Border Padding="10" Background="{StaticResource DarkGreyColor}">
         <Grid>
@@ -80,10 +50,10 @@
                 <Button x:Name="HomeButton" Background="Transparent" Height="140" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="46,-26,0,-49" Style="{StaticResource ButtonStyleSimpleHoverEffect}">
                     <Image Source="/Pictures/home_logo.png"/>
                 </Button>
-                <Button x:Name="AnimeButton" Content="Anime" Style="{StaticResource BackgroundGreenToGoldButtonStyle}" Template="{StaticResource ButtonTemplate}" Grid.Column="1" Height="42" Width="120" Background="#FF4DC932"/>
-                <Button x:Name="MangaButton" Content="Manga" Style="{StaticResource BackgroundGreenToGoldButtonStyle}" Template="{StaticResource ButtonTemplate}" Grid.Column="3" Height="42" Width="120" Background="#FF4DC932"/>
-                <Button x:Name="MusicButton" Content="Music" Style="{StaticResource BackgroundGreenToGoldButtonStyle}" Template="{StaticResource ButtonTemplate}" Grid.Column="5" Height="42" Width="120" Background="#FF4DC932"/>
-                <Button x:Name="LibaryButton" Content="Libary" Style="{StaticResource BackgroundGreenToGoldButtonStyle}" Template="{StaticResource ButtonTemplate}" Grid.Column="7" Height="42" Width="120" Background="#FF4DC932"/>
+                <Button x:Name="AnimeButton" Content="Anime" Style="{StaticResource BackgroundGreenToGoldButtonStyle}" Template="{StaticResource ButtonTemplate}" Grid.Column="1" Height="42" Width="120"/>
+                <Button x:Name="MangaButton" Content="Manga" Style="{StaticResource BackgroundGreenToGoldButtonStyle}" Template="{StaticResource ButtonTemplate}" Grid.Column="3" Height="42" Width="120"/>
+                <Button x:Name="MusicButton" Content="Music" Style="{StaticResource BackgroundGreenToGoldButtonStyle}" Template="{StaticResource ButtonTemplate}" Grid.Column="5" Height="42" Width="120"/>
+                <Button x:Name="LibaryButton" Content="Libary" Style="{StaticResource BackgroundGreenToGoldButtonStyle}" Template="{StaticResource ButtonTemplate}" Grid.Column="7" Height="42" Width="120"/>
                 
                 <!-- Search -->
                 <TextBlock x:Name="SearchName" Text="Search" HorizontalAlignment="Right" FontSize="20" Grid.Column="8" Foreground="White" VerticalAlignment="Bottom"/>

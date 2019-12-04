@@ -9,7 +9,61 @@
         <SolidColorBrush x:Key="GoldColor" Color="#FFDAAB2E"/>
         <SolidColorBrush x:Key="GreyColor" Color="#FF2E2C2C"/>
         <SolidColorBrush x:Key="DarkGreyColor" Color="#FF1D1B1B"/>
+        
+        <!-- STYLES-->
 
+        <!-- Button Styles-->
+        <Style x:Key="ButtonStyleSimpleHoverEffect" TargetType="Button">
+            <Setter Property="OverridesDefaultStyle" Value="True"/>
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Name="border" 
+                            BorderThickness="1"
+                            BorderBrush="transparent" 
+                            CornerRadius="3" 
+                            Background="{TemplateBinding Background}">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="border" Property="BorderBrush" Value="transparent" />
+                                <Setter Property="Cursor" Value="Hand"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        
+        <Style TargetType="Button" x:Key="BackgroundGreenToGoldButtonStyle">
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="VerticalAlignment" Value="Top"/>
+            <Setter Property="Cursor" Value="Hand"/>
+            <Setter Property="Background" Value="{StaticResource LimeGreenColor}" />
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="{StaticResource GoldColor}"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+        
+        <Style TargetType="Button" x:Key="ButtonStyle">
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="VerticalAlignment" Value="Top"/>
+            <Setter Property="Cursor" Value="Hand"/>
+        </Style>
+        
+        <!-- Label Styles -->
+        <Style TargetType="Label" x:Key="GoldToGreenHoverColor">
+            <Setter Property="Foreground" Value="{StaticResource GoldColor}" />
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Foreground" Value="{StaticResource LimeGreenColor}"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
 
         <Style TargetType="Label" x:Key="TextStyle">
             <Setter Property="HorizontalAlignment" Value="Center"/>
@@ -17,7 +71,8 @@
             <Setter Property="FontSize" Value="20"/>
             <Setter Property="FontFamily" Value="Luminari"/>
         </Style>
-
+        
+        <!-- TextBox Styles-->
         <Style TargetType="TextBox" x:Key="TextBoxStyle">
             <Setter Property="HorizontalAlignment" Value="Center"/>
             <Setter Property="VerticalAlignment" Value="Top"/>
@@ -35,23 +90,6 @@
             <Setter Property="Width" Value="280"/>
         </Style>
 
-        <Style TargetType="Button" x:Key="BackgroundGreenToGoldButtonStyle">
-            <Setter Property="HorizontalAlignment" Value="Center"/>
-            <Setter Property="VerticalAlignment" Value="Top"/>
-            <Setter Property="Cursor" Value="Hand"/>
-            <Setter Property="Background" Value="{StaticResource LimeGreenColor}" />
-            <Style.Triggers>
-                <Trigger Property="IsMouseOver" Value="True">
-                    <Setter Property="Foreground" Value="{StaticResource GoldColor}"/>
-                </Trigger>
-            </Style.Triggers>
-        </Style>
-        
-        <Style TargetType="Button" x:Key="ButtonStyle">
-            <Setter Property="HorizontalAlignment" Value="Center"/>
-            <Setter Property="VerticalAlignment" Value="Top"/>
-            <Setter Property="Cursor" Value="Hand"/>
-        </Style>
         
         <ControlTemplate x:Key="TextBoxBaseControlTemplate" TargetType="{x:Type TextBoxBase}">
             <Border Background="{TemplateBinding Background}" 
