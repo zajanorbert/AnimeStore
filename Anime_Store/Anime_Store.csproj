@@ -72,6 +72,14 @@
     <Compile Include="Users\SignUp.xaml.cs">
       <DependentUpon>SignUp.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ViewModels\AnimeInfoViewModel.cs" />
+    <Compile Include="ViewModels\AnimeListViewModel.cs" />
+    <Compile Include="Views\AnimeInfoView.xaml.cs">
+      <DependentUpon>AnimeInfoView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AnimeListView.xaml.cs">
+      <DependentUpon>AnimeListView.xaml</DependentUpon>
+    </Compile>
     <Page Include="AccountWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -93,6 +101,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Users\SignUp.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AnimeInfoView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AnimeListView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -136,6 +152,9 @@
     <Resource Include="Pictures\Power.png" />
     <Resource Include="Pictures\home_logo.png" />
     <Content Include="Pictures\power_symbol.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Models\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

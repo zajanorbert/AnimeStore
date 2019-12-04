@@ -1,0 +1,52 @@
+﻿<UserControl x:Class="Anime_Store.Views.AnimeListView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Anime_Store.Views"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        <ScrollViewer Grid.Column="0" x:Name="MainThumbnail" Margin="0,0,0,0" VerticalScrollBarVisibility="Auto">
+
+            <Grid  Margin="5,0,5,5" Background="{StaticResource GreyColor}">
+                <Grid.ColumnDefinitions >
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="6*"/>
+                    <RowDefinition Height="0.8*"/>
+                    <RowDefinition Height="6*"/>
+                    <RowDefinition Height="0.8*"/>
+                    <RowDefinition Height="6*"/>
+                    <RowDefinition Height="0.8*"/>
+                    <RowDefinition Height="6*"/>
+                    <RowDefinition Height="0.8*"/>
+                    <RowDefinition Height="6*"/>
+                    <RowDefinition Height="0.8*"/>
+                    <RowDefinition Height="6*"/>
+                    <RowDefinition Height="0.8*"/>
+                    <RowDefinition Height="6*"/>
+                    <RowDefinition Height="0.8*"/>
+                    <RowDefinition Height="6*"/>
+                    <RowDefinition Height="0.8*"/>
+                </Grid.RowDefinitions>
+                <Button Grid.Column="0" Name="AnimeButton1" Click="AnimeButton_Click"  Grid.Row="1" Style="{StaticResource ButtonStyle}" Template="{StaticResource ButtonTemplate}" Background="Transparent">
+                    <StackPanel>
+                        <Image Source="https://cdnimg.xyz/cover/bosco-daibouken.png" MaxHeight="330" />
+                    </StackPanel>
+                </Button>
+                <Button Style="{StaticResource ButtonStyleSimpleHoverEffect} "Click="AnimeButton_Click" Padding="0"  MinHeight="16" Grid.Row="2" Grid.Column="0" Margin=" 0,0,0,20"   Background="Transparent" BorderBrush="Transparent">
+                    <Label Content="Bosco Daibouken" FontSize="17" FontWeight="Bold" Style="{StaticResource GoldToGreenHoverColor}"/>
+                </Button>
+
+            </Grid>
+        </ScrollViewer>
+
+    </Grid>
+</UserControl>

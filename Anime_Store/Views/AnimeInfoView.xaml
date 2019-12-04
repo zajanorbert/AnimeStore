@@ -1,0 +1,39 @@
+﻿<UserControl x:Class="Anime_Store.Views.AnimeInfoView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Anime_Store.Views"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        <ScrollViewer Grid.Column="0" x:Name="MainThumbnail" Margin="0,0,0,0" VerticalScrollBarVisibility="Auto">
+            <Grid   Background="{StaticResource GreyColor}" Height="706">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="12*"/>
+                    <RowDefinition Height="0.5*"/>
+                    <RowDefinition Height="0.75*"/>
+                    <RowDefinition Height="2*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="0">
+                    <Grid.ColumnDefinitions >
+                        <ColumnDefinition Width="2*"/>
+                        <ColumnDefinition Width="3*"/>
+                    </Grid.ColumnDefinitions>
+                    <Image Margin="0, 10, 0, 10" Grid.Column="0" Source="https://cdnimg.xyz/cover/bosco-daibouken.png"/>
+                    <StackPanel Grid.Column="1" Margin="0,0,201,0">
+                        <Label x:Name="AnimeInfoPageTitle" FontSize="18" Foreground="{StaticResource GoldColor}" FontWeight="Bold">Bosco Daibouken</Label>
+                        <Button Background="Transparent" Foreground="Red" HorizontalAlignment="Left">Favourite *</Button>
+                        <Label  Foreground="{StaticResource LimeGreenColor}" FontWeight="Bold">Plot Summary:</Label>
+                        <TextBlock TextWrapping="Wrap" HorizontalAlignment="Left" Text=" Based on the book by Tony Wolf. The Fountain of Life is the source of all life forces in the Bosco World. Princess Apricot, who is supposed to become Queen of Fountainland-the Guardian of the Fountain of Life-is kidnapped by villains who aim to rule the Bosco World. If Princess Apricot can't take the queen's throne by the next solar eclipse, the Fountain of Life will dry up. The animals living in the forest of Bosco, including Frog, Otter and Tortoise, decide to help Princess and take her to Fountainland in order to protect their peaceful life in the Bosco World. So begins the journey in a balloon full of dreams, hope, adventures, and love!"/>
+                        <Label  Foreground="{StaticResource LimeGreenColor}" FontWeight="Bold">Genre:</Label>
+                        <Button Background="Transparent" Foreground="Red" HorizontalAlignment="Left">Adventure</Button>
+                        <Label  Foreground="{StaticResource LimeGreenColor}" FontWeight="Bold">Released:</Label>
+                        <TextBlock TextWrapping="Wrap" HorizontalAlignment="Left" Text="1986"/>
+                    </StackPanel>
+                </Grid>
+            </Grid>
+        </ScrollViewer>
+    </Grid>
+</UserControl>

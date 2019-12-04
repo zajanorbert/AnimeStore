@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Anime_Store.ViewModels;
 
 namespace Anime_Store
 {
@@ -24,6 +25,7 @@ namespace Anime_Store
         public MainWindow()
         {
             InitializeComponent();
+            DataContext = new AnimeListViewModel();
             LogoutButton.Visibility = Visibility.Hidden;
             AccountButton.Visibility = Visibility.Hidden;
             LogInButton.Visibility = Visibility.Visible;
@@ -71,5 +73,9 @@ namespace Anime_Store
             Search.getAutoText(Autotxt, lbSuggestion);
         }
 
+        private void AnimeButton_Click(object sender, RoutedEventArgs e)
+        {
+            DataContext = new AnimeListViewModel();
+        }
     }
 }
