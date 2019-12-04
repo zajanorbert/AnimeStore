@@ -17,7 +17,6 @@
                     <ControlTemplate TargetType="Button">
                         <Border Name="border" 
                             BorderThickness="1"
-
                             BorderBrush="transparent" 
                             CornerRadius="3" 
                             Background="{TemplateBinding Background}">
@@ -33,34 +32,17 @@
                 </Setter.Value>
             </Setter>
         </Style>
-        <Style x:Key="ButtonStyleChangeToGreen" TargetType="Button">
-            <Setter Property="OverridesDefaultStyle" Value="True"/>
-                <Setter Property="Margin" Value="5"/>
-                <Setter Property="Template">
-                    <Setter.Value>
-                        <ControlTemplate TargetType="Button">
-                            <Border Name="border" 
-                            BorderThickness="1"
-                            BorderBrush="transparent" 
-                            CornerRadius="3" 
-                            Background="{TemplateBinding Background}">
-                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
-                            </Border>
-                            
-                            <ControlTemplate.Triggers>
-                                <Trigger Property="IsMouseOver" Value="True">
-                                    <Setter TargetName="border" Property="BorderBrush" Value="transparent" />
-                                    <Setter Property="Cursor" Value="Hand"/>
-                                    <Setter Property="Foreground" Value="#FF4DC932"/>
-                            </Trigger>
-                            </ControlTemplate.Triggers>
-                        </ControlTemplate>
-                    </Setter.Value>
-                </Setter>
+        <Style TargetType="Label" x:Key="GoldToGreenHoverColor">
+            <Setter Property="Foreground" Value="{StaticResource GoldColor}" />
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Foreground" Value="{StaticResource LimeGreenColor}"/>
+                </Trigger>
+            </Style.Triggers>
         </Style>
     </Window.Resources>
-    <Border Padding="10" Background="#FF1D1B1B">
-        <Grid Background="#FF1D1B1B">
+    <Border Padding="10" Background="{StaticResource DarkGreyColor}">
+        <Grid>
             <Grid.RowDefinitions>
                 <RowDefinition Height="0.4*" />
                 <RowDefinition Height="1.8*" />
@@ -98,10 +80,10 @@
                 <Button x:Name="HomeButton" Background="Transparent" Height="140" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="46,-26,0,-49" Style="{StaticResource ButtonStyleSimpleHoverEffect}">
                     <Image Source="/Pictures/home_logo.png"/>
                 </Button>
-                <Button x:Name="AnimeButton" Content="Anime" Style="{StaticResource ButtonStyle}" Template="{StaticResource ButtonTemplate}" Grid.Column="1" Height="42" Width="120" Background="#FF4DC932"/>
-                <Button x:Name="MangaButton" Content="Manga" Style="{StaticResource ButtonStyle}" Template="{StaticResource ButtonTemplate}" Grid.Column="3" Height="42" Width="120" Background="#FF4DC932"/>
-                <Button x:Name="MusicButton" Content="Music" Style="{StaticResource ButtonStyle}" Template="{StaticResource ButtonTemplate}" Grid.Column="5" Height="42" Width="120" Background="#FF4DC932"/>
-                <Button x:Name="LibaryButton" Content="Libary" Style="{StaticResource ButtonStyle}" Template="{StaticResource ButtonTemplate}" Grid.Column="7" Height="42" Width="120" Background="#FF4DC932"/>
+                <Button x:Name="AnimeButton" Content="Anime" Style="{StaticResource BackgroundGreenToGoldButtonStyle}" Template="{StaticResource ButtonTemplate}" Grid.Column="1" Height="42" Width="120" Background="#FF4DC932"/>
+                <Button x:Name="MangaButton" Content="Manga" Style="{StaticResource BackgroundGreenToGoldButtonStyle}" Template="{StaticResource ButtonTemplate}" Grid.Column="3" Height="42" Width="120" Background="#FF4DC932"/>
+                <Button x:Name="MusicButton" Content="Music" Style="{StaticResource BackgroundGreenToGoldButtonStyle}" Template="{StaticResource ButtonTemplate}" Grid.Column="5" Height="42" Width="120" Background="#FF4DC932"/>
+                <Button x:Name="LibaryButton" Content="Libary" Style="{StaticResource BackgroundGreenToGoldButtonStyle}" Template="{StaticResource ButtonTemplate}" Grid.Column="7" Height="42" Width="120" Background="#FF4DC932"/>
                 
                 <!-- Search -->
                 <TextBlock x:Name="SearchName" Text="Search" HorizontalAlignment="Right" FontSize="20" Grid.Column="8" Foreground="White" VerticalAlignment="Bottom"/>
@@ -114,8 +96,8 @@
                     <ColumnDefinition Width="4*"/>
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
-                <TextBlock Padding="15,0,0,0" Text="ANIME" Background="#FF4DC932" FontWeight="Bold" OpacityMask="#FF4DC932" Grid.Column="0"/>
-                <TextBlock Padding="15,0,0,0" Text="GENRE" Background="#FF4DC932" FontWeight="Bold" OpacityMask="#FF4DC932" Grid.Column="1"/>
+                <TextBlock Padding="15,0,0,0" Text="ANIME" Background="{StaticResource LimeGreenColor}" FontWeight="Bold" OpacityMask="#FF4DC932" Grid.Column="0"/>
+                <TextBlock Padding="15,0,0,0" Text="GENRE" Background="{StaticResource LimeGreenColor}" FontWeight="Bold" OpacityMask="#FF4DC932" Grid.Column="1"/>
 
             </Grid>
 
@@ -127,16 +109,16 @@
                 </Grid.ColumnDefinitions>
 
                 <ScrollViewer Grid.Column="0" x:Name="MainThumbnail" Margin="0,0,0,0" VerticalScrollBarVisibility="Auto">
-                    <Grid  Margin="5,0,5,5" Background="#FF2E2C2C">
+                    <Grid  Margin="5,0,5,5" Background="{StaticResource GreyColor}">
                         <Grid.ColumnDefinitions >
                             <ColumnDefinition Width="*" />
                             <ColumnDefinition Width="*"/>
                             <ColumnDefinition Width="*"/>
                             <ColumnDefinition Width="*"/>
                         </Grid.ColumnDefinitions>
-                        
+
                         <Grid.RowDefinitions>
-                            <RowDefinition Height="0.8*"/>
+                            <RowDefinition Height="*"/>
                             <RowDefinition Height="6*"/>
                             <RowDefinition Height="0.8*"/>
                             <RowDefinition Height="6*"/>
@@ -154,43 +136,18 @@
                             <RowDefinition Height="6*"/>
                             <RowDefinition Height="0.8*"/>
                         </Grid.RowDefinitions>
-
+                        
+                        
+                        <!-- Images/Labels -->
                         <Button Grid.Column="0" Grid.Row="1" Style="{StaticResource ButtonStyle}" Template="{StaticResource ButtonTemplate}" Background="Transparent">
                             <StackPanel>
                                 <Image Source="https://cdnimg.xyz/cover/bosco-daibouken.png" MaxHeight="330" />
                             </StackPanel>
                         </Button>
-                        <Button Style="{StaticResource ButtonStyleChangeToGreen}" Padding="0" Content="Bosco Daibouken" FontSize="17" FontWeight="Bold" MinHeight="16" Grid.Row="2" Grid.Column="0" Margin=" 0,0,0,20" Foreground="#FFDAAB2E"  Background="{x:Null}" BorderBrush="{x:Null}"/>
-                        <Button Grid.Column="0" Grid.Row="3" Style="{StaticResource ButtonStyle}" Template="{StaticResource ButtonTemplate}" Background="Transparent">
-                            <StackPanel>
-                                <Image Source="https://cdnimg.xyz/cover/bosco-daibouken.png" MaxHeight="330" />
-                            </StackPanel>
+                        <Button Style="{StaticResource ButtonStyleSimpleHoverEffect}" Padding="0"  MinHeight="16" Grid.Row="2" Grid.Column="0" Margin=" 0,0,0,20"   Background="Transparent" BorderBrush="Transparent">
+                            <Label Content="Bosco Daibouken" FontSize="17" FontWeight="Bold" Style="{StaticResource GoldToGreenHoverColor}"/>
                         </Button>
-                        <Button Style="{StaticResource ButtonStyleChangeToGreen}" Padding="0" Content="Bosco Daibouken" FontSize="17" FontWeight="Bold" MinHeight="16" Grid.Row="4" Grid.Column="0" Margin=" 0,0,0,20" Foreground="#FFDAAB2E"  Background="{x:Null}" BorderBrush="{x:Null}"/>
-                        <Button Grid.Column="0" Grid.Row="5" Style="{StaticResource ButtonStyle}" Template="{StaticResource ButtonTemplate}" Background="Transparent">
-                            <StackPanel>
-                                <Image Source="https://cdnimg.xyz/cover/bosco-daibouken.png" MaxHeight="330" />
-                            </StackPanel>
-                        </Button>
-                        <Button Style="{StaticResource ButtonStyleChangeToGreen}" Padding="0" Content="Bosco Daibouken" FontSize="17" FontWeight="Bold" MinHeight="16" Grid.Row="6" Grid.Column="0" Margin=" 0,0,0,20" Foreground="#FFDAAB2E"  Background="{x:Null}" BorderBrush="{x:Null}"/>
-                        <Button Grid.Column="0" Grid.Row="7" Style="{StaticResource ButtonStyle}" Template="{StaticResource ButtonTemplate}" Background="Transparent">
-                            <StackPanel>
-                                <Image Source="https://cdnimg.xyz/cover/bosco-daibouken.png" MaxHeight="330" />
-                            </StackPanel>
-                        </Button>
-                        <Button Style="{StaticResource ButtonStyleChangeToGreen}" Padding="0" Content="Bosco Daibouken" FontSize="17" FontWeight="Bold" MinHeight="16" Grid.Row="8" Grid.Column="0" Margin=" 0,0,0,20" Foreground="#FFDAAB2E"  Background="{x:Null}" BorderBrush="{x:Null}"/>
-                        <Button Grid.Column="0" Grid.Row="7" Style="{StaticResource ButtonStyle}" Template="{StaticResource ButtonTemplate}" Background="Transparent">
-                            <StackPanel>
-                                <Image Source="https://cdnimg.xyz/cover/bosco-daibouken.png" MaxHeight="330" />
-                            </StackPanel>
-                        </Button>
-                        <Button Style="{StaticResource ButtonStyleChangeToGreen}" Padding="0" Content="Bosco Daibouken" FontSize="17" FontWeight="Bold" MinHeight="16" Grid.Row="10" Grid.Column="0" Margin=" 0,0,0,20" Foreground="#FFDAAB2E"  Background="{x:Null}" BorderBrush="{x:Null}"/>
-                        <!--
-                        <Image Source="https://cdnimg.xyz/cover/bosco-daibouken.png" Grid.Column="0" Grid.Row="3" MaxHeight="330"/>
-                        <Image Source="https://cdnimg.xyz/cover/bosco-daibouken.png" Grid.Column="0" Grid.Row="5" MaxHeight="330"/>
-                        <Label Padding="0" HorizontalAlignment="Center" VerticalAlignment="Center" Content="Bosco Daibouken" FontSize="17" FontWeight="Bold" Grid.Row="4" Grid.Column="0" Height="20" Margin=" 0,8,0,20" Foreground="#FFDAAB2E"/>
-                        <Label Padding="0" HorizontalAlignment="Center" VerticalAlignment="Center" Content="Bosco Daibouken" FontSize="17" FontWeight="Bold" Grid.Row="6" Grid.Column="0" Height="20" Margin=" 0,8,0,20" Foreground="#FFDAAB2E"/>
-                        -->
+
                     </Grid>
 
                 </ScrollViewer>
