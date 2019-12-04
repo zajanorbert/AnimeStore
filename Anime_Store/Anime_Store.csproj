@@ -64,6 +64,8 @@
       <DependentUpon>AccountWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="Search.cs" />
+    <Compile Include="ThumbBuilder.cs" />
+    <Compile Include="Thumbnail.cs" />
     <Compile Include="Users\Login.xaml.cs">
       <DependentUpon>Login.xaml</DependentUpon>
     </Compile>

@@ -9,7 +9,7 @@
         WindowStartupLocation="CenterScreen"
         ResizeMode="CanResizeWithGrip">
     <Window.Resources>
-        
+
     </Window.Resources>
     <Border Padding="10" Background="{StaticResource DarkGreyColor}">
         <Grid>
@@ -46,7 +46,7 @@
                     <ColumnDefinition Width="1.3*" />
                     <ColumnDefinition Width="5*" />
                 </Grid.ColumnDefinitions>
-                
+
                 <Button x:Name="HomeButton" Background="Transparent" Height="140" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="46,-26,0,-49" Style="{StaticResource ButtonStyleSimpleHoverEffect}">
                     <Image Source="/Pictures/home_logo.png"/>
                 </Button>
@@ -54,7 +54,7 @@
                 <Button x:Name="MangaButton" Content="Manga" Style="{StaticResource BackgroundGreenToGoldButtonStyle}" Template="{StaticResource ButtonTemplate}" Grid.Column="3" Height="42" Width="120"/>
                 <Button x:Name="MusicButton" Content="Music" Style="{StaticResource BackgroundGreenToGoldButtonStyle}" Template="{StaticResource ButtonTemplate}" Grid.Column="5" Height="42" Width="120"/>
                 <Button x:Name="LibaryButton" Content="Libary" Style="{StaticResource BackgroundGreenToGoldButtonStyle}" Template="{StaticResource ButtonTemplate}" Grid.Column="7" Height="42" Width="120"/>
-                
+
                 <!-- Search -->
                 <TextBlock x:Name="SearchName" Text="Search" HorizontalAlignment="Right" FontSize="20" Grid.Column="8" Foreground="White" VerticalAlignment="Bottom"/>
                 <TextBox VerticalAlignment="Bottom" Padding="3" FontSize="18"  Height="27"  x:Name="Autotxt" TextWrapping="NoWrap" Grid.Column="9"/>
@@ -73,52 +73,82 @@
 
             <!-- Scroll windows-->
             <Grid Grid.Row="3" MinHeight="578"  RenderTransformOrigin="0.5,0.5" ScrollViewer.VerticalScrollBarVisibility="Hidden">
+
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="4*" />
-                    <ColumnDefinition Width="1*" />
+                    <ColumnDefinition Width="4*"/>
+                    <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
-
                 <ScrollViewer Grid.Column="0" x:Name="MainThumbnail" Margin="0,0,0,0" VerticalScrollBarVisibility="Auto">
-                    <Grid  Margin="5,0,5,5" Background="{StaticResource GreyColor}">
-                        <Grid.ColumnDefinitions >
-                            <ColumnDefinition Width="*" />
-                            <ColumnDefinition Width="*"/>
-                            <ColumnDefinition Width="*"/>
-                            <ColumnDefinition Width="*"/>
-                        </Grid.ColumnDefinitions>
-
+                    <Grid Background="{StaticResource GreyColor}" Height="706">
                         <Grid.RowDefinitions>
+                            <RowDefinition Height="12*"/>
+                            <RowDefinition Height="0.5*"/>
+                            <RowDefinition Height="0.75*"/>
+                            <RowDefinition Height="2*"/>
                             <RowDefinition Height="*"/>
-                            <RowDefinition Height="6*"/>
-                            <RowDefinition Height="0.8*"/>
-                            <RowDefinition Height="6*"/>
-                            <RowDefinition Height="0.8*"/>
-                            <RowDefinition Height="6*"/>
-                            <RowDefinition Height="0.8*"/>
-                            <RowDefinition Height="6*"/>
-                            <RowDefinition Height="0.8*"/>
-                            <RowDefinition Height="6*"/>
-                            <RowDefinition Height="0.8*"/>
-                            <RowDefinition Height="6*"/>
-                            <RowDefinition Height="0.8*"/>
-                            <RowDefinition Height="6*"/>
-                            <RowDefinition Height="0.8*"/>
-                            <RowDefinition Height="6*"/>
-                            <RowDefinition Height="0.8*"/>
                         </Grid.RowDefinitions>
-                        
-                        
-                        <!-- Images/Labels -->
-                        <Button Grid.Column="0" Grid.Row="1" Style="{StaticResource ButtonStyle}" Template="{StaticResource ButtonTemplate}" Background="Transparent">
-                            <StackPanel>
-                                <Image Source="https://cdnimg.xyz/cover/bosco-daibouken.png" MaxHeight="330" />
-                            </StackPanel>
-                        </Button>
-                        <Button Style="{StaticResource ButtonStyleSimpleHoverEffect}" Padding="0"  MinHeight="16" Grid.Row="2" Grid.Column="0" Margin=" 0,0,0,20"   Background="Transparent" BorderBrush="Transparent">
-                            <Label Content="Bosco Daibouken" FontSize="17" FontWeight="Bold" Style="{StaticResource GoldToGreenHoverColor}"/>
-                        </Button>
+                        <Grid Grid.Row="0">
+                            <Grid.ColumnDefinitions >
+                                <ColumnDefinition Width="2*"/>
+                                <ColumnDefinition Width="3*"/>
+                            </Grid.ColumnDefinitions>
+                            <Image Margin="0, 10, 0, 10" Grid.Column="0" Source="https://cdnimg.xyz/cover/bosco-daibouken.png"/>
+                            <StackPanel Grid.Column="1" Margin="0,0,201,0">
+                                <Label x:Name="AnimeInfoPageTitle" FontSize="18" Foreground="{StaticResource GoldColor}" FontWeight="Bold">Bosco Daibouken</Label>
+                                <Button Background="Transparent" Foreground="Red" HorizontalAlignment="Left">Favourite *</Button>
+                                <Label  Foreground="{StaticResource LimeGreenColor}" FontWeight="Bold">Plot Summary:</Label>
+                                <TextBlock TextWrapping="Wrap" HorizontalAlignment="Left" Text=" Based on the book by Tony Wolf. The Fountain of Life is the source of all life forces in the Bosco World. Princess Apricot, who is supposed to become Queen of Fountainland-the Guardian of the Fountain of Life-is kidnapped by villains who aim to rule the Bosco World. If Princess Apricot can't take the queen's throne by the next solar eclipse, the Fountain of Life will dry up. The animals living in the forest of Bosco, including Frog, Otter and Tortoise, decide to help Princess and take her to Fountainland in order to protect their peaceful life in the Bosco World. So begins the journey in a balloon full of dreams, hope, adventures, and love!"/>
+                                <Label  Foreground="{StaticResource LimeGreenColor}" FontWeight="Bold">Genre:</Label>
+                                <TextBlock TextWrapping="Wrap" HorizontalAlignment="Left" Text="Adventure"/>
 
+                            </StackPanel>
+                        </Grid>
                     </Grid>
+
+
+
+
+                    <!-- 
+                <Grid  Margin="5,0,5,5" Background="{StaticResource GreyColor}">
+                    <Grid.ColumnDefinitions >
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="6*"/>
+                        <RowDefinition Height="0.8*"/>
+                        <RowDefinition Height="6*"/>
+                        <RowDefinition Height="0.8*"/>
+                        <RowDefinition Height="6*"/>
+                        <RowDefinition Height="0.8*"/>
+                        <RowDefinition Height="6*"/>
+                        <RowDefinition Height="0.8*"/>
+                        <RowDefinition Height="6*"/>
+                        <RowDefinition Height="0.8*"/>
+                        <RowDefinition Height="6*"/>
+                        <RowDefinition Height="0.8*"/>
+                        <RowDefinition Height="6*"/>
+                        <RowDefinition Height="0.8*"/>
+                        <RowDefinition Height="6*"/>
+                        <RowDefinition Height="0.8*"/>
+                    </Grid.RowDefinitions>
+                    <Button Grid.Column="0" Grid.Row="1" Style="{StaticResource ButtonStyle}" Template="{StaticResource ButtonTemplate}" Background="Transparent">
+                        <StackPanel>
+                            <Image Source="https://cdnimg.xyz/cover/bosco-daibouken.png" MaxHeight="330" />
+                        </StackPanel>
+                    </Button>
+                    <Button Style="{StaticResource ButtonStyleSimpleHoverEffect}" Padding="0"  MinHeight="16" Grid.Row="2" Grid.Column="0" Margin=" 0,0,0,20"   Background="Transparent" BorderBrush="Transparent">
+                        <Label Content="Bosco Daibouken" FontSize="17" FontWeight="Bold" Style="{StaticResource GoldToGreenHoverColor}"/>
+                    </Button>
+
+                </Grid>
+            -->
+
+
 
                 </ScrollViewer>
                 <ScrollViewer Grid.Column="1" VerticalScrollBarVisibility="Auto"/>
