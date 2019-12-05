@@ -17,6 +17,15 @@
         <DataTemplate x:Name="AnimeInfoViewTemplate" DataType="{x:Type viewmodels:AnimeInfoViewModel}">
             <views:AnimeInfoView DataContext="{Binding}" />
         </DataTemplate>
+        <DataTemplate x:Name="LibaryListViewTemplate" DataType="{x:Type viewmodels:LibaryListViewModel}">
+            <views:LibaryListView DataContext="{Binding}" />
+        </DataTemplate>
+        <DataTemplate x:Name="MangaListViewTemplate" DataType="{x:Type viewmodels:MangaListViewModel}">
+            <views:MangaListView DataContext="{Binding}" />
+        </DataTemplate>
+        <DataTemplate x:Name="MusicListViewTemplate" DataType="{x:Type viewmodels:MusicListViewModel}">
+            <views:MusicListView DataContext="{Binding}" />
+        </DataTemplate>
     </Window.Resources>
     <Border Padding="10" Background="{StaticResource DarkGreyColor}">
         <Grid>
@@ -54,13 +63,13 @@
                     <ColumnDefinition Width="5*" />
                 </Grid.ColumnDefinitions>
 
-                <Button x:Name="HomeButton" Background="Transparent" Height="140" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="46,-26,0,-49" Style="{StaticResource ButtonStyleSimpleHoverEffect}">
+                <Button x:Name="HomeButton" Click="HomeButton_Click" Background="Transparent" Height="140" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="46,-26,0,-49" Style="{StaticResource ButtonStyleSimpleHoverEffect}">
                     <Image Source="/Pictures/home_logo.png"/>
                 </Button>
                 <Button x:Name="AnimeButton" Click="AnimeButton_Click" Content="Anime" Style="{StaticResource BackgroundGreenToGoldButtonStyle}" Template="{StaticResource ButtonTemplate}" Grid.Column="1" Height="42" Width="120"/>
-                <Button x:Name="MangaButton" Content="Manga" Style="{StaticResource BackgroundGreenToGoldButtonStyle}" Template="{StaticResource ButtonTemplate}" Grid.Column="3" Height="42" Width="120"/>
-                <Button x:Name="MusicButton" Content="Music" Style="{StaticResource BackgroundGreenToGoldButtonStyle}" Template="{StaticResource ButtonTemplate}" Grid.Column="5" Height="42" Width="120"/>
-                <Button x:Name="LibaryButton" Content="Libary" Style="{StaticResource BackgroundGreenToGoldButtonStyle}" Template="{StaticResource ButtonTemplate}" Grid.Column="7" Height="42" Width="120"/>
+                <Button x:Name="MangaButton" Click="MangaButton_Click" Content="Manga" Style="{StaticResource BackgroundGreenToGoldButtonStyle}" Template="{StaticResource ButtonTemplate}" Grid.Column="3" Height="42" Width="120"/>
+                <Button x:Name="MusicButton" Click="MusicButton_Click" Content="Music" Style="{StaticResource BackgroundGreenToGoldButtonStyle}" Template="{StaticResource ButtonTemplate}" Grid.Column="5" Height="42" Width="120"/>
+                <Button x:Name="LibaryButton" Click="LibaryButton_Click" Content="Libary" Style="{StaticResource BackgroundGreenToGoldButtonStyle}" Template="{StaticResource ButtonTemplate}" Grid.Column="7" Height="42" Width="120"/>
 
                 <!-- Search -->
                 <TextBlock x:Name="SearchName" Text="Search" HorizontalAlignment="Right" FontSize="20" Grid.Column="8" Foreground="White" VerticalAlignment="Bottom"/>

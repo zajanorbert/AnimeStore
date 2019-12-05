@@ -72,12 +72,28 @@ namespace Anime_Store
         {
             Search.getAutoText(Autotxt, lbSuggestion);
         }
-        public void AnimeinfoButton_Click(object sender, RoutedEventArgs e)
+
+        private void AnimeButton_Click(object sender, RoutedEventArgs e)
         {
             DataContext = new AnimeInfoViewModel();
         }
 
-        private void AnimeButton_Click(object sender, RoutedEventArgs e)
+        private void MangaButton_Click(object sender, RoutedEventArgs e)
+        {
+            DataContext = new MangaListViewModel();
+        }
+
+        private void MusicButton_Click(object sender, RoutedEventArgs e)
+        {
+            DataContext = new MusicListViewModel();
+        }
+
+        private void LibaryButton_Click(object sender, RoutedEventArgs e)
+        {
+            DataContext = new LibaryListViewModel();
+        }
+
+        private void HomeButton_Click(object sender, RoutedEventArgs e)
         {
             DataContext = new AnimeListViewModel();
         }

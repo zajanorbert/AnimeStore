@@ -74,11 +74,23 @@
     </Compile>
     <Compile Include="ViewModels\AnimeInfoViewModel.cs" />
     <Compile Include="ViewModels\AnimeListViewModel.cs" />
+    <Compile Include="ViewModels\LibaryListViewModel.cs" />
+    <Compile Include="ViewModels\MangaListViewModel.cs" />
+    <Compile Include="ViewModels\MusicListViewModel.cs" />
+    <Compile Include="Views\LibaryListView.xaml.cs">
+      <DependentUpon>LibaryListView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\AnimeInfoView.xaml.cs">
       <DependentUpon>AnimeInfoView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\AnimeListView.xaml.cs">
       <DependentUpon>AnimeListView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MangaListView.xaml.cs">
+      <DependentUpon>MangaListView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MusicListView.xaml.cs">
+      <DependentUpon>MusicListView.xaml</DependentUpon>
     </Compile>
     <Page Include="AccountWindow.xaml">
       <SubType>Designer</SubType>
@@ -104,11 +116,23 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Views\LibaryListView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\AnimeInfoView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\AnimeListView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\MangaListView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\MusicListView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

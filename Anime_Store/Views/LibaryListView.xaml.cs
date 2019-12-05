@@ -13,25 +13,16 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-
 namespace Anime_Store.Views
 {
     /// <summary>
-    /// Interaction logic for AnimeListView.xaml
+    /// Interaction logic for LibaryListView.xaml
     /// </summary>
-    public partial class AnimeListView : UserControl
+    public partial class LibaryListView : UserControl
     {
-        public AnimeListView()
+        public LibaryListView()
         {
             InitializeComponent();
         }
-
-        private void AnimeButton_Click(object sender, RoutedEventArgs e)
-        {
-            //DataContext = new AnimeInfoViewModel();
-            this.DataContext = new AnimeInfoView();
-
-        }
-
     }
 }
