@@ -32,5 +32,15 @@ namespace Anime_Store.Users
                 this.Close();
             }
         }
+
+        private void reg_SignupButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void BackButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
     }
 }

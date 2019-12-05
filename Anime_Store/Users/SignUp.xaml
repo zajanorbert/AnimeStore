@@ -13,6 +13,7 @@
 
     <Border BorderBrush="#feece0" BorderThickness="5" CornerRadius="10">
         <Grid>
+            <!-- Background="#feece0" -->
             <Grid.Background>
                 <ImageBrush ImageSource="/Pictures/17730.jpg"/>
             </Grid.Background>
@@ -23,7 +24,8 @@
             <TextBox x:Name="reg_Username" Style="{StaticResource TextBoxStyle}" Template="{StaticResource TextBoxBaseControlTemplate}" Margin="25,116,477,0" />
             <TextBox x:Name="reg_Email" Style="{StaticResource TextBoxStyle}" Template="{StaticResource TextBoxBaseControlTemplate}" Margin="25,190,477,0" />
             <PasswordBox x:Name="reg_Password" Style="{StaticResource PswBoxStyle}" Template="{StaticResource PasswordBoxControlTemplate}" Margin="25,274,477,0" />
-            <Button Style="{StaticResource ButtonStyle}" x:Name="reg_Signup" Template="{StaticResource ButtonTemplate}" Background="DeepPink" Width="115" Height="36" Content="Sign Up" Margin="98,341,568,55"/>
+            <Button Style="{StaticResource BackgroundPinkToGreenButtonStyle}" x:Name="reg_SignupButton" Click="reg_SignupButton_Click" Template="{StaticResource ButtonTemplate}" Width="115" Height="36" Content="Sign Up" Margin="98,341,568,55"/>
+            <Button Style="{StaticResource BackgroundPinkToGreenButtonStyle}" x:Name="BackButton" Click="BackButton_Click" Template="{StaticResource ButtonTemplate}" Width="115" Height="36" Content="Go Back" Margin="101,382,574,0"/>
         </Grid>
     </Border>
 </Window>

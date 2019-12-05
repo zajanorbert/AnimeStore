@@ -22,8 +22,8 @@ namespace Anime_Store.Users
         public Login()
         {
             InitializeComponent();
-            btn_SignUp.Click += SignUpButton_Click;
-            log_Exit.Click += ExitButton_Click;
+            btn_SignUpButton.Click += SignUpButton_Click;
+            log_ExitButton.Click += ExitButton_Click;
         }
 
         private void SignUpButton_Click(object sender, RoutedEventArgs e)
@@ -41,6 +41,11 @@ namespace Anime_Store.Users
         private void btn_Login_Click(object sender, RoutedEventArgs e)
         {
             
+            this.Close();
+        }
+
+        private void log_ExitButton_Click(object sender, RoutedEventArgs e)
+        {
             this.Close();
         }
     }
