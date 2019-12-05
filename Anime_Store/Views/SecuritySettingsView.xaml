@@ -1,4 +1,4 @@
-﻿<UserControl x:Class="Anime_Store.Views.MusicListView"
+﻿<UserControl x:Class="Anime_Store.Views.SecuritySettingsView"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -9,7 +9,7 @@
     <Grid>
         <ScrollViewer Grid.Column="0" x:Name="MainThumbnail" Margin="0,0,0,0" VerticalScrollBarVisibility="Auto">
             <Grid Background="{StaticResource GreyColor}">
-                <Label FontSize="40" Foreground="{StaticResource GoldColor}" Content="Music Page View" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                <Label FontSize="40" Foreground="{StaticResource GoldColor}" Content="Security Settings Page View" HorizontalAlignment="Center" VerticalAlignment="Center" />
             </Grid>
         </ScrollViewer>
     </Grid>

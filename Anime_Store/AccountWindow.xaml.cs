@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using Anime_Store.ViewModels;
 
 namespace Anime_Store
 {
@@ -26,12 +27,27 @@ namespace Anime_Store
 
         private void BackToMenuButton_Click(object sender, RoutedEventArgs e)
         {
-            this.Hide();
+            this.Close();
         }
 
         private void SaveButton_Click(object sender, RoutedEventArgs e)
         {
 
+        }
+
+        private void ProfileSettingsButton_Click(object sender, RoutedEventArgs e)
+        {
+            DataContext = new ProfileSettingsViewModel();
+        }
+
+        private void GeneralSettingsButton_Click(object sender, RoutedEventArgs e)
+        {
+            DataContext = new GeneralSettingsViewModel();
+        }
+
+        private void SecuritySettingsButton_Click(object sender, RoutedEventArgs e)
+        {
+            DataContext = new SecuritySettingViewModel();
         }
     }
 }

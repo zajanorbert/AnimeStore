@@ -4,10 +4,23 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Anime_Store"
+        xmlns:viewmodels="clr-namespace:Anime_Store.ViewModels"
+        xmlns:views="clr-namespace:Anime_Store.Views"
         mc:Ignorable="d"
         Title="AccountWindow" MinHeight="600" MinWidth="1010" Height="768" Width="768"
         WindowStartupLocation="CenterScreen"
         ResizeMode="CanResizeWithGrip">
+    <Window.Resources>
+        <DataTemplate x:Name="ProfileSettingViewTemplate" DataType="{x:Type viewmodels:ProfileSettingsViewModel}">
+            <views:ProfileSettingView DataContext="{Binding}" />
+        </DataTemplate>
+        <DataTemplate x:Name="GeneralSettignsViewTemplate" DataType="{x:Type viewmodels:GeneralSettingsViewModel}">
+            <views:GeneralSettignsView DataContext="{Binding}" />
+        </DataTemplate>
+        <DataTemplate x:Name="SecuritySettingsViewTemplate" DataType="{x:Type viewmodels:SecuritySettingViewModel}">
+            <views:SecuritySettingsView DataContext="{Binding}" />
+        </DataTemplate>
+    </Window.Resources>
     <Border Padding="10" Background="#FF1D1B1B">
         <Grid Background="#FF1D1B1B">
             <Grid.RowDefinitions>
@@ -23,8 +36,8 @@
                     <ColumnDefinition Width="4*"/>
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
-                <Button x:Name="BackToMenuButton" Content="Back To Menu" Style="{StaticResource ButtonStyle}" Template="{StaticResource ButtonTemplate}" Grid.Column="0" Height="42" Width="120" Background="#FF4DC932" HorizontalAlignment="Left" Click="BackToMenuButton_Click"/>
-                <Button x:Name="SaveButton" Content="Save" Style="{StaticResource ButtonStyle}" Template="{StaticResource ButtonTemplate}" Grid.Column="2" Height="42" Width="100" Background="#FF4DC932" HorizontalAlignment="Right" Click="SaveButton_Click"/>
+                <Button x:Name="BackToMenuButton" Content="Back To Menu" Style="{StaticResource BackgroundGreenToGoldButtonStyle}" Template="{StaticResource ButtonTemplate}" Grid.Column="0" Height="42" Width="120" HorizontalAlignment="Left" Click="BackToMenuButton_Click"/>
+                <Button x:Name="SaveButton" Content="Save" Style="{StaticResource BackgroundGreenToGoldButtonStyle}" Template="{StaticResource ButtonTemplate}" Grid.Column="2" Height="42" Width="100" HorizontalAlignment="Right" Click="SaveButton_Click"/>
             </Grid>
             <!-- Green Textboxes -->
             <Grid Grid.Row="1">
@@ -32,8 +45,8 @@
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="4*"/>
                 </Grid.ColumnDefinitions>
-                <TextBlock Padding="15,0,0,0" Text="Setting" Background="#FF4DC932" FontWeight="Bold" OpacityMask="#FF4DC932" Grid.Column="0"/>
-                <TextBlock x:Name="AccountGreentexblock" Padding="15,0,0,0" Text="Profil" Background="#FF4DC932" FontWeight="Bold" OpacityMask="#FF4DC932" Grid.Column="1"/>
+                <TextBlock Padding="15,0,0,0" Text="Setting" Background="{StaticResource LimeGreenColor}" FontWeight="Bold" OpacityMask="{StaticResource LimeGreenColor}" Grid.Column="0"/>
+                <TextBlock x:Name="AccountGreentexblock" Padding="15,0,0,0" Text="Profil" Background="{StaticResource LimeGreenColor}" FontWeight="Bold" OpacityMask="#FF4DC932" Grid.Column="1"/>
             </Grid>
             <!-- Setting changer/Setting Window-->
 
@@ -43,13 +56,53 @@
                     <ColumnDefinition Width="4*" />
                 </Grid.ColumnDefinitions>
                 <!-- Setting Changer-->
-                <StackPanel Grid.Column="0">
-
-                </StackPanel>
+                
+                <Grid Grid.Column="0" Background="#FF232222" >
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="6*" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    <Button x:Name="ProfileSettingsButton" Click="ProfileSettingsButton_Click" Style="{StaticResource ButtonStyleSimpleHoverEffect}" MinHeight="16" Grid.Row="0" Background="Transparent" BorderBrush="Transparent">
+                        <Label Content="Profile Settings" FontSize="13" FontWeight="Bold" Style="{StaticResource GoldToGreenHoverColor}"/>
+                    </Button>
+                    <Button x:Name="GeneralSettingsButton" Click="GeneralSettingsButton_Click" Style="{StaticResource ButtonStyleSimpleHoverEffect}" MinHeight="16" Grid.Row="1" Background="Transparent" BorderBrush="Transparent">
+                        <Label Content="General Settings" FontSize="13" FontWeight="Bold" Style="{StaticResource GoldToGreenHoverColor}"/>
+                    </Button>
+                    <Button x:Name="SecuritySettingsButton" Click="SecuritySettingsButton_Click" Style="{StaticResource ButtonStyleSimpleHoverEffect}" MinHeight="16" Grid.Row="2" Background="Transparent" BorderBrush="Transparent">
+                        <Label Content="Security Settings" FontSize="13" FontWeight="Bold" Style="{StaticResource GoldToGreenHoverColor}"/>
+                    </Button>
+                    <Button Style="{StaticResource ButtonStyleSimpleHoverEffect}" MinHeight="16" Grid.Row="3" Background="Transparent" BorderBrush="Transparent">
+                        <Label Content="Crab People" FontSize="13" FontWeight="Bold" Style="{StaticResource GoldToGreenHoverColor}"/>
+                    </Button>
+                    <Button Style="{StaticResource ButtonStyleSimpleHoverEffect}" MinHeight="16" Grid.Row="4" Background="Transparent" BorderBrush="Transparent">
+                        <Label Content="Button Sample" FontSize="13" FontWeight="Bold" Style="{StaticResource GoldToGreenHoverColor}"/>
+                    </Button>
+                    <Button Style="{StaticResource ButtonStyleSimpleHoverEffect}" MinHeight="16" Grid.Row="5" Background="Transparent" BorderBrush="Transparent">
+                        <Label Content="Button Sample" FontSize="13" FontWeight="Bold" Style="{StaticResource GoldToGreenHoverColor}"/>
+                    </Button>
+                    <Button Style="{StaticResource ButtonStyleSimpleHoverEffect}" MinHeight="16" Grid.Row="6" Background="Transparent" BorderBrush="Transparent">
+                        <Label Content="Button Sample" FontSize="13" FontWeight="Bold" Style="{StaticResource GoldToGreenHoverColor}"/>
+                    </Button>
+                    <Button Style="{StaticResource ButtonStyleSimpleHoverEffect}" MinHeight="16" Grid.Row="7" Background="Transparent" BorderBrush="Transparent">
+                        <Label Content="Button Sample" FontSize="13" FontWeight="Bold" Style="{StaticResource GoldToGreenHoverColor}"/>
+                    </Button>
+                    <Button Style="{StaticResource ButtonStyleSimpleHoverEffect}" MinHeight="16" Grid.Row="8" Background="Transparent" BorderBrush="Transparent">
+                        <Label Content="Button Sample" FontSize="13" FontWeight="Bold" Style="{StaticResource GoldToGreenHoverColor}"/>
+                    </Button>
+                </Grid>                 
+                
                 <!-- Setting Window-->
-                <StackPanel Grid.Column="1" Background="#FF2E2C2C">
+                <ContentControl Grid.Column="1" Content="{Binding}"/>
 
-                </StackPanel>
             </Grid>
         </Grid>
     </Border>

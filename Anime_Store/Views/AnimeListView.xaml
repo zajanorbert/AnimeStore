@@ -10,7 +10,7 @@
     <Grid>
         <ScrollViewer Grid.Column="0" x:Name="MainThumbnail" Margin="0,0,0,0" VerticalScrollBarVisibility="Auto">
 
-            <Grid  Margin="5,0,5,5" Background="{StaticResource GreyColor}">
+            <Grid Background="{StaticResource GreyColor}">
                 <Grid.ColumnDefinitions >
                     <ColumnDefinition Width="*" />
                     <ColumnDefinition Width="*"/>

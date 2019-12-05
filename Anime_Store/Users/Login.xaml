@@ -15,6 +15,7 @@
 
     <Border BorderBrush="Black" BorderThickness="10" CornerRadius="10">
         <Grid>
+            <!--Background="Black" -->
             <Grid.Background>
                 <ImageBrush ImageSource="/Pictures/17639.jpg" Stretch="UniformToFill"/>
             </Grid.Background>
@@ -24,9 +25,9 @@
             <Label Style="{StaticResource TextStyle}" x:Name="lbl_Password" Content="Password" Margin="19,189,662,0" Foreground="White"/>
             <Label Style="{StaticResource TextStyle}" Content="Don't have an account? Register here: " Margin="10,396,416,0" Width="364" Foreground="White"/>
 
-            <TextBox x:Name="log_UserName" Style="{StaticResource TextBoxStyle}" Template="{StaticResource TextBoxBaseControlTemplate}" HorizontalAlignment="Center" Height="37" Width="278" VerticalAlignment="Top" Margin="125,95,379,0" FontSize="20" />
+            <TextBox x:Name="log_UserName" Style="{StaticResource TextBoxStyle}" Template="{StaticResource TextBoxBaseControlTemplate}" Padding="2" HorizontalAlignment="Center" Height="37" Width="278" VerticalAlignment="Top" Margin="125,95,379,0" FontSize="20" />
 
-            <PasswordBox x:Name="log_Password" Style="{StaticResource PswBoxStyle}" Template="{StaticResource PasswordBoxControlTemplate}" Height="38" Width="278" Margin="125,188,379,0" />
+            <PasswordBox x:Name="log_Password" Style="{StaticResource PswBoxStyle}" Template="{StaticResource PasswordBoxControlTemplate}" Padding="2" Height="38" Width="278" Margin="125,188,379,0" />
 
             <Button x:Name="btn_Login" Style="{StaticResource ButtonStyle}" Content="Login" Template="{StaticResource ButtonTemplate}" Background="DeepPink" Width="115" Height="50" Margin="288,264,379,0" Click="btn_Login_Click"/>
 

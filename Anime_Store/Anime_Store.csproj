@@ -74,9 +74,15 @@
     </Compile>
     <Compile Include="ViewModels\AnimeInfoViewModel.cs" />
     <Compile Include="ViewModels\AnimeListViewModel.cs" />
+    <Compile Include="ViewModels\GeneralSettingsViewModel.cs" />
     <Compile Include="ViewModels\LibaryListViewModel.cs" />
     <Compile Include="ViewModels\MangaListViewModel.cs" />
     <Compile Include="ViewModels\MusicListViewModel.cs" />
+    <Compile Include="ViewModels\ProfileSettingsViewModel.cs" />
+    <Compile Include="ViewModels\SecuritySettingViewModel.cs" />
+    <Compile Include="Views\GeneralSettignsView.xaml.cs">
+      <DependentUpon>GeneralSettignsView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\LibaryListView.xaml.cs">
       <DependentUpon>LibaryListView.xaml</DependentUpon>
     </Compile>
@@ -91,6 +97,12 @@
     </Compile>
     <Compile Include="Views\MusicListView.xaml.cs">
       <DependentUpon>MusicListView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ProfileSettingsView.xaml.cs">
+      <DependentUpon>ProfileSettingsView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SecuritySettingsView.xaml.cs">
+      <DependentUpon>SecuritySettingsView.xaml</DependentUpon>
     </Compile>
     <Page Include="AccountWindow.xaml">
       <SubType>Designer</SubType>
@@ -116,6 +128,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Views\GeneralSettignsView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\LibaryListView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -133,6 +149,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\MusicListView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ProfileSettingsView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\SecuritySettingsView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
