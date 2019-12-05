@@ -1,4 +1,5 @@
-﻿<Window x:Class="Anime_Store.Users.SignUp"
+﻿<!-- Picture Version -->
+<!--<Window x:Class="Anime_Store.Users.SignUp"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -11,9 +12,8 @@
         WindowStartupLocation="CenterScreen"
         Background="Transparent">
 
-    <Border BorderBrush="#feece0" BorderThickness="5" CornerRadius="10">
+    <Border BorderBrush="{StaticResource Cream}" BorderThickness="5" CornerRadius="10">
         <Grid>
-            <!-- Background="#feece0" -->
             <Grid.Background>
                 <ImageBrush ImageSource="/Pictures/17730.jpg"/>
             </Grid.Background>
@@ -25,7 +25,35 @@
             <TextBox x:Name="reg_Email" Style="{StaticResource TextBoxStyle}" Template="{StaticResource TextBoxBaseControlTemplate}" Margin="25,190,477,0" />
             <PasswordBox x:Name="reg_Password" Style="{StaticResource PswBoxStyle}" Template="{StaticResource PasswordBoxControlTemplate}" Margin="25,274,477,0" />
             <Button Style="{StaticResource BackgroundPinkToGreenButtonStyle}" x:Name="reg_SignupButton" Click="reg_SignupButton_Click" Template="{StaticResource ButtonTemplate}" Width="115" Height="36" Content="Sign Up" Margin="98,341,568,55"/>
-            <Button Style="{StaticResource BackgroundPinkToGreenButtonStyle}" x:Name="BackButton" Click="BackButton_Click" Template="{StaticResource ButtonTemplate}" Width="115" Height="36" Content="Go Back" Margin="101,382,574,0"/>
+            <Button Style="{StaticResource BackgroundPinkToGreenButtonStyle}" x:Name="BackButton" Click="BackButton_Click" Template="{StaticResource ButtonTemplate}" Width="115" Height="36" Content="Go Back" Margin="98,382,568,0"/>
+        </Grid>
+    </Border>
+</Window>-->
+<Window x:Class="Anime_Store.Users.SignUp"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Anime_Store.Users"
+        mc:Ignorable="d"
+        Title="SignUp" Height="450" Width="350"
+        WindowStyle="None"
+        AllowsTransparency="True"
+        WindowStartupLocation="CenterScreen"
+        Background="Transparent">
+
+    <Border BorderBrush="{StaticResource Cream}" BorderThickness="5" CornerRadius="10">
+        <Grid Background="{StaticResource Cream}">
+            
+            <Label Content="Sign Up" Style="{StaticResource TextStyle}" Margin="25,10,205,0" FontSize="26"/>
+            <Label Content="User Name" Style="{StaticResource TextStyle}" Margin="0,77,0,0" HorizontalAlignment="Center"/>
+            <Label Content="E-mail address" Style="{StaticResource TextStyle}" Margin="0,151,0,0"/>
+            <Label Content="Password" Style="{StaticResource TextStyle}" Margin="0,235,0,0"/>
+            <TextBox x:Name="reg_Username" Style="{StaticResource TextBoxStyle}" Template="{StaticResource TextBoxBaseControlTemplate}" Margin="0,116,0,0" />
+            <TextBox x:Name="reg_Email" Style="{StaticResource TextBoxStyle}" Template="{StaticResource TextBoxBaseControlTemplate}" Margin="0,190,0,0" />
+            <PasswordBox x:Name="reg_Password" Style="{StaticResource PswBoxStyle}" Template="{StaticResource PasswordBoxControlTemplate}" Margin="0,274,0,0" />
+            <Button Style="{StaticResource BackgroundPinkToGreenButtonStyle}" x:Name="reg_SignupButton" Click="reg_SignupButton_Click" Template="{StaticResource ButtonTemplate}" Width="115" Height="36" Content="Sign Up" Margin="0,341,0,55"/>
+            <Button Style="{StaticResource BackgroundPinkToGreenButtonStyle}" x:Name="BackButton" Click="BackButton_Click" Template="{StaticResource ButtonTemplate}" Width="115" Height="36" Content="Go Back" Margin="0,382,0,0"/>
         </Grid>
     </Border>
 </Window>

@@ -23,6 +23,7 @@ namespace Anime_Store
         public AccountWindow()
         {
             InitializeComponent();
+            DataContext = new ProfileSettingsViewModel();
         }
 
         private void BackToMenuButton_Click(object sender, RoutedEventArgs e)

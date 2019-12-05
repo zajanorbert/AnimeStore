@@ -1,21 +1,20 @@
-﻿<Window x:Class="Anime_Store.Users.Login"
-        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:Anime_Store.Users"
-        mc:Ignorable="d"
-        Title="Login" Height="450" Width="800"
-        WindowStyle="None"
-        AllowsTransparency="True"
-        WindowStartupLocation="CenterScreen"
-        Background="Transparent">
-
+﻿<!-- Picture Version -->
+<!--<Window x:Class="Anime_Store.Users.Login"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:local="clr-namespace:Anime_Store.Users"
+    mc:Ignorable="d"
+    Title="Login" Height="450" Width="800"
+    WindowStyle="None"
+    AllowsTransparency="True"
+    WindowStartupLocation="CenterScreen"
+    Background="Transparent">
 
 
     <Border BorderBrush="Black" BorderThickness="10" CornerRadius="10">
         <Grid>
-            <!--Background="Black" -->
             <Grid.Background>
                 <ImageBrush ImageSource="/Pictures/17639.jpg" Stretch="UniformToFill"/>
             </Grid.Background>
@@ -33,12 +32,47 @@
 
             <Button x:Name="btn_SignUpButton" Style="{StaticResource BackgroundPinkToGreenButtonStyle}" Template="{StaticResource ButtonTemplate}" Content="SignUp" Width="105" Height="36"  Margin="374,394,300,0"/>
 
-            <Button x:Name="log_ExitButton" Click="log_ExitButton_Click" Style="{StaticResource ButtonStyle}" Template="{StaticResource ButtonTemplate}" Margin="739,0,0,0" Background="Transparent" Height="51" Width="51">
+                <Button x:Name="log_ExitButton" Click="log_ExitButton_Click" Style="{StaticResource ButtonStyle}" Template="{StaticResource ButtonTemplate}" Margin="739,0,0,0" Background="Transparent" Height="51" Width="51">
+                    <StackPanel>
+                        <Image Source="/Pictures/Power.png"/>
+                    </StackPanel>
+                </Button>
+        </Grid>
+    </Border>
+</Window>-->
+    <!-- FF Version -->
+<Window x:Class="Anime_Store.Users.Login"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Anime_Store.Users"
+        mc:Ignorable="d"
+        Title="Login" Height="450" Width="550"
+        WindowStyle="None"
+        AllowsTransparency="True"
+        WindowStartupLocation="CenterScreen"
+        Background="Transparent">
+    <Border BorderBrush="{StaticResource DarkGreyColor}" BorderThickness="10" CornerRadius="10">
+        <Grid Background="{StaticResource DarkGreyColor}">
+            <Label Style="{StaticResource TextStyle}" x:Name="lbl_Title" Content="Login First" FontSize="26" FontWeight="Bold" Margin="19,10,322,0" Foreground="White"/>
+            <Label Style="{StaticResource TextStyle}" x:Name="lbl_UserName" Content="UserName" Margin="10,95,362,0" Foreground="White"/>
+            <Label Style="{StaticResource TextStyle}" x:Name="lbl_Password" Content="Password" Margin="19,189,362,0" Foreground="White"/>
+            <Label Style="{StaticResource TextStyle}" Content="Don't have an account? Register here: " Margin="10,396,96,0" Width="364" Foreground="White"/>
+
+            <TextBox x:Name="log_UserName" Style="{StaticResource TextBoxStyle}" Template="{StaticResource TextBoxBaseControlTemplate}" Padding="2" HorizontalAlignment="Center" Height="37" Width="278" VerticalAlignment="Top" Margin="125,95,79,0" FontSize="20" />
+
+            <PasswordBox x:Name="log_Password" Style="{StaticResource PswBoxStyle}" Template="{StaticResource PasswordBoxControlTemplate}" Padding="2" Height="38" Width="278" Margin="125,188,79,0" />
+
+            <Button x:Name="btn_LoginButton" Style="{StaticResource BackgroundPinkToGreenButtonStyle}" Content="Login" Template="{StaticResource ButtonTemplate}"  Width="115" Height="45" Margin="288,264,79,0" Click="btn_Login_Click"/>
+
+            <Button x:Name="btn_SignUpButton" Style="{StaticResource BackgroundPinkToGreenButtonStyle}" Template="{StaticResource ButtonTemplate}" Content="SignUp" Width="105" Height="36"  Margin="424,394,0,0"/>
+
+            <Button x:Name="log_ExitButton" Click="log_ExitButton_Click" Style="{StaticResource ButtonStyle}" Template="{StaticResource ButtonTemplate}" Margin="459,0,0,0" Background="Transparent" Height="51" Width="51">
                 <StackPanel>
                     <Image Source="/Pictures/Power.png"/>
                 </StackPanel>
             </Button>
-
         </Grid>
     </Border>
 </Window>

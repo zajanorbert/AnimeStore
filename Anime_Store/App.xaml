@@ -9,14 +9,15 @@
         <SolidColorBrush x:Key="GoldColor" Color="#FFDAAB2E"/>
         <SolidColorBrush x:Key="GreyColor" Color="#FF2E2C2C"/>
         <SolidColorBrush x:Key="DarkGreyColor" Color="#FF1D1B1B"/>
-        <SolidColorBrush x:Key="DeepPink" Color="#FFF13A9D" />
-        
+        <SolidColorBrush x:Key="DeepPink" Color="#FFF13A9D"/>
+        <SolidColorBrush x:Key="Cream" Color="#feece0"/>
+        <SolidColorBrush x:Key="White" Color="#FFE8E8E8"/>
+
         <!-- STYLES-->
 
         <!-- Button Styles-->
         <Style x:Key="ButtonStyleSimpleHoverEffect" TargetType="Button">
             <Setter Property="OverridesDefaultStyle" Value="True"/>
-            <Setter Property="Margin" Value="5"/>
             <Setter Property="Template">
                 <Setter.Value>
                     <ControlTemplate TargetType="Button">

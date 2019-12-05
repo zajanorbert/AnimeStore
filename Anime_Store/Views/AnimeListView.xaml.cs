@@ -29,7 +29,6 @@ namespace Anime_Store.Views
         private void AnimeButton_Click(object sender, RoutedEventArgs e)
         {
             Application.Current.MainWindow.DataContext = new AnimeInfoViewModel();
-
         }
 
     }
