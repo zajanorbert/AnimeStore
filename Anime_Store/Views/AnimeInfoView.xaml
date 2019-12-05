@@ -24,13 +24,13 @@
                     <Image Margin="0, 10, 0, 10" Grid.Column="0" Source="https://cdnimg.xyz/cover/bosco-daibouken.png"/>
                     <StackPanel Grid.Column="1" Margin="0,0,201,0">
                         <Label x:Name="AnimeInfoPageTitle" FontSize="18" Foreground="{StaticResource GoldColor}" FontWeight="Bold" Content="Bosco Daibouken" />
-                        <Button Style="{StaticResource ButtonStyleSimpleHoverEffect}" Foreground="Red" HorizontalAlignment="Left" Content="Favouite*" />
+                        <Button Style="{StaticResource ButtonStyleSimpleHoverEffect}" Foreground="Red" HorizontalAlignment="Left" Content="Favouite*" Margin="5, 0, 0, 0" />
                         <Label  Foreground="{StaticResource LimeGreenColor}" FontWeight="Bold" Content="Plot Summary:" />
                         <TextBlock TextWrapping="Wrap" Foreground="{StaticResource White}" HorizontalAlignment="Left" Text=" Based on the book by Tony Wolf. The Fountain of Life is the source of all life forces in the Bosco World. Princess Apricot, who is supposed to become Queen of Fountainland-the Guardian of the Fountain of Life-is kidnapped by villains who aim to rule the Bosco World. If Princess Apricot can't take the queen's throne by the next solar eclipse, the Fountain of Life will dry up. The animals living in the forest of Bosco, including Frog, Otter and Tortoise, decide to help Princess and take her to Fountainland in order to protect their peaceful life in the Bosco World. So begins the journey in a balloon full of dreams, hope, adventures, and love!"/>
                         <Label  Foreground="{StaticResource LimeGreenColor}" FontWeight="Bold" Content="Genre:"/>
-                        <Button Style="{StaticResource ButtonStyleSimpleHoverEffect}" Foreground="Red" HorizontalAlignment="Left" Content="Adventure" />
+                        <Button Style="{StaticResource ButtonStyleSimpleHoverEffect}" Foreground="Red" HorizontalAlignment="Left" Margin="5, 0, 0, 0" Content="Adventure" />
                         <Label  Foreground="{StaticResource LimeGreenColor}" FontWeight="Bold" Content="Released:"/>
-                        <TextBlock TextWrapping="Wrap" HorizontalAlignment="Left" Text="1986"/>
+                        <TextBlock TextWrapping="Wrap" HorizontalAlignment="Left" Text="1986" Foreground="{StaticResource White}" Margin="5, 0, 0, 0" />
                     </StackPanel>
                 </Grid>
             </Grid>

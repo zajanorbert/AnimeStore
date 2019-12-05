@@ -7,7 +7,7 @@
         xmlns:viewmodels="clr-namespace:Anime_Store.ViewModels"
         xmlns:views="clr-namespace:Anime_Store.Views"
         mc:Ignorable="d"
-        Title="AccountWindow" MinHeight="600" MinWidth="1010" Height="768" Width="768"
+        Title="AccountWindow" MinHeight="800" MinWidth="1100" Height="768" Width="768"
         WindowStartupLocation="CenterScreen"
         ResizeMode="CanResizeWithGrip">
     <Window.Resources>
@@ -57,7 +57,7 @@
                 </Grid.ColumnDefinitions>
                 <!-- Setting Changer-->
                 
-                <Grid Grid.Column="0" Background="#FF232222" >
+                <Grid Grid.Column="0" Background="{StaticResource MidGreyColor}" >
                     <Grid.RowDefinitions>
                         <RowDefinition Height="*" />
                         <RowDefinition Height="*" />

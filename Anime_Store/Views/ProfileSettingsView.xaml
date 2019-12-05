@@ -5,11 +5,58 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:Anime_Store.Views"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
+             d:DesignHeight="800" d:DesignWidth="800">
     <Grid>
-        <ScrollViewer Grid.Column="0" x:Name="MainThumbnail" Margin="0,0,0,0" VerticalScrollBarVisibility="Auto">
-            <Grid Background="{StaticResource GreyColor}">
-                <Label FontSize="40" Foreground="{StaticResource GoldColor}" Content="Profile Settings Page View" HorizontalAlignment="Center" VerticalAlignment="Center" />
+        <ScrollViewer Grid.Column="0" x:Name="MainThumbnail" Background="{StaticResource GreyColor}" VerticalScrollBarVisibility="Auto">
+            <Grid Background="{StaticResource GreyColor}" Height="800" MaxWidth="800">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="2*"/>
+                    <ColumnDefinition Width="3*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    
+                </Grid.RowDefinitions>
+                <!-- Picture Settings-->
+                <Button x:Name="ImageChangerButton" Click="ImageChangerButton_Click" Height="240" Width="240" Grid.Row="0" Grid.Column="0" Style="{StaticResource ButtonStyleSimpleHoverEffect}" Template="{StaticResource CircleButton}" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Background="{DynamicResource Cream}" Margin="0, 0 ,0, 50">
+                    <!-- Picture Placeholder -->
+                    <Label Content="Picture" FontSize="50"/>
+                </Button>
+                <!-- Description Settings -->
+                <Grid Grid.Row="0" Grid.Column="1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1.65*" />
+                        <ColumnDefinition Width="5*" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="4.5*" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    <Label Content="Profils Description:" FontWeight="Bold" Foreground="{StaticResource Green}" VerticalAlignment="Bottom"/>
+                    <Button x:Name="ChangeDescriptionButton" Click="ChangeDescriptionButton_Click" Grid.Column="1" Grid.Row="0" Margin="0, 0, 3, 3" Style="{StaticResource BackgroundGreenToGoldButtonStyle}" Template="{StaticResource ButtonTemplate}" Content="Change Description" FontSize="60" HorizontalAlignment="Right" VerticalAlignment="Bottom"/>
+                    <TextBlock x:Name="DescriptionTextBlock" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" TextWrapping="Wrap" Foreground="{StaticResource White}" HorizontalAlignment="Left" Text="What the fuck did you just fucking say about me, you little bitch? I'll have you know I graduated top of my class in the Navy Seals, and I've been involved in numerous secret raids on Al-Quaeda, and I have over 300 confirmed kills. I am trained in gorilla warfare and I'm the top sniper in the entire US armed forces. You are nothing to me but just another target. I will wipe you the fuck out with precision the likes of which has never been seen before on this Earth, mark my fucking words. You think you can get away with saying that shit to me over the Internet? Think again, fucker. As we speak I am contacting my secret network of spies across the USA and your IP is being traced right now so you better prepare for the storm, maggot. The storm that wipes out the pathetic little thing you call your life. You're fucking dead, kid. I can be anywhere, anytime, and I can kill you in over seven hundred ways, and that's just with my bare hands." />
+                    <TextBox x:Name="DescriptionTextBox" Visibility="Hidden" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Background="{StaticResource MidGreyColor}" BorderBrush="Transparent" Foreground="{StaticResource White}"/>
+                    <Button x:Name="SaveDescriptionButton" Visibility="Hidden" Click="SaveDescriptionButton_Click" Grid.Row="2" Grid.Column="0" Style="{StaticResource BackgroundGreenToGoldButtonStyle}" Template="{StaticResource ButtonTemplate}" Width="70" Content="Save" />
+                    <Button x:Name="BackFromDescriptionButton" Visibility="Hidden" Click="BackFromDescriptionButton_Click" Grid.Row="2" Grid.Column="1" Style="{StaticResource BackgroundGreenToGoldButtonStyle}" Template="{StaticResource ButtonTemplate}" Width="70" Content="Back" HorizontalAlignment="Left" />
+                </Grid>
+                <!-- Profile Data Settings-->
+                <Grid Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="2.5*" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="2.5*" />
+                        <RowDefinition Height="2.5*" />
+                        <RowDefinition Height="2.5*" />
+                        <RowDefinition Height="21*" />
+                    </Grid.RowDefinitions>
+                    <Label Grid.Row="1" Grid.Column="0" Content="Username: " FontSize="18" FontWeight="Bold" Foreground="{StaticResource White}" HorizontalAlignment="Right" />
+                    <Label Grid.Row="2" Grid.Column="0" Content="Email Adress: " FontSize="18" FontWeight="Bold" Foreground="{StaticResource White}" HorizontalAlignment="Right" />
+                    <Label Grid.Row="3" Grid.Column="0" Content="Password: " FontSize="18" FontWeight="Bold" Foreground="{StaticResource White}" HorizontalAlignment="Right" />
+                </Grid>
             </Grid>
         </ScrollViewer>
     </Grid>
