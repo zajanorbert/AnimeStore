@@ -22,10 +22,14 @@ namespace Anime_Store
     public partial class MainWindow : Window
     {
         Users.Login login;
+
         public MainWindow()
         {
             InitializeComponent();
-            DataContext = new AnimeListViewModel();
+            if(DataContext == null)
+            {
+                DataContext = new AnimeListViewModel();
+            }
             LogoutButton.Visibility = Visibility.Hidden;
             AccountButton.Visibility = Visibility.Hidden;
             LogInButton.Visibility = Visibility.Visible;
@@ -75,7 +79,7 @@ namespace Anime_Store
 
         private void AnimeButton_Click(object sender, RoutedEventArgs e)
         {
-            DataContext = new AnimeInfoViewModel();
+            DataContext = new AnimeListViewModel();
         }
 
         private void MangaButton_Click(object sender, RoutedEventArgs e)

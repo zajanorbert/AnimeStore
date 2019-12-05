@@ -12,7 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-
+using Anime_Store.ViewModels;
 
 namespace Anime_Store.Views
 {
@@ -28,8 +28,7 @@ namespace Anime_Store.Views
 
         private void AnimeButton_Click(object sender, RoutedEventArgs e)
         {
-            //DataContext = new AnimeInfoViewModel();
-            this.DataContext = new AnimeInfoView();
+            Application.Current.MainWindow.DataContext = new AnimeInfoViewModel();
 
         }
 
