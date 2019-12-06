@@ -76,7 +76,7 @@
                 <TextBox VerticalAlignment="Bottom" Padding="3" FontSize="18"  Height="27"  x:Name="Autotxt" TextWrapping="NoWrap" Grid.Column="9"/>
                 <ListBox x:Name="lbSuggestion" Background="LightGray" Visibility="Collapsed" Margin="0" Grid.Column="9" VerticalAlignment="Bottom"/>
             </Grid>
-            <!-- Green Textboxes -->
+            <!-- Green Textblocks -->
             <Grid Grid.Row="2" MaxHeight="20">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="4*"/>
@@ -98,21 +98,30 @@
                 <ContentControl Grid.Column="0" Content="{Binding}"/>
                 <ScrollViewer Grid.Column="1" VerticalScrollBarVisibility="Auto"/>
             </Grid>
+            <!-- Pages -->
             <Grid Grid.Row="4">
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*" />
-                    <ColumnDefinition Width="*" />
-                    <ColumnDefinition Width="*" />
-                    <ColumnDefinition Width="*" />
-                    <ColumnDefinition Width="*" />
-                    <ColumnDefinition Width="*" />
-                    <ColumnDefinition Width="*" />
-                    <ColumnDefinition Width="*" />
-                    <ColumnDefinition Width="*" />
-                    <ColumnDefinition Width="*" />
-                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="4*" />
                     <ColumnDefinition Width="*" />
                 </Grid.ColumnDefinitions>
+                <Grid Grid.Column="0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="6.5*" />
+                        <ColumnDefinition Width="2*" />
+                        <ColumnDefinition Width="1.8*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="1.8*" />
+                        <ColumnDefinition Width="2*" />
+                        <ColumnDefinition Width="6.5*" />
+                    </Grid.ColumnDefinitions>
+                </Grid>
             </Grid>
         </Grid>
     </Border>

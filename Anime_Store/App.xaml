@@ -106,7 +106,7 @@
             <Setter Property="Width" Value="280"/>
         </Style>
 
-        
+        <!-- Templates -->
         <ControlTemplate x:Key="TextBoxBaseControlTemplate" TargetType="{x:Type TextBoxBase}">
             <Border Background="{TemplateBinding Background}" 
                 x:Name="Bd" BorderBrush="Black"

@@ -61,6 +61,10 @@
                     <Label Grid.Row="1" Grid.Column="0" Content="Username: " FontSize="18" FontWeight="Bold" Foreground="{StaticResource White}" HorizontalAlignment="Right" />
                     <Label Grid.Row="2" Grid.Column="0" Content="Email Adress: " FontSize="18" FontWeight="Bold" Foreground="{StaticResource White}" HorizontalAlignment="Right" />
                     <Label Grid.Row="3" Grid.Column="0" Content="Password: " FontSize="18" FontWeight="Bold" Foreground="{StaticResource White}" HorizontalAlignment="Right" />
+                    <Label Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" Content="Username Sample" FontSize="18" FontWeight="Bold" Foreground="{StaticResource White}" HorizontalAlignment="Left" />
+                    <Label Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2" Content="Email Adress Sample" FontSize="18" FontWeight="Bold" Foreground="{StaticResource White}" HorizontalAlignment="Left" />
+
+
                     <!-- Password Setting-->
                     <Button x:Name="ChangePasswordButton" Click="ChangePasswordButton_Click" Grid.Row="3" Grid.ColumnSpan="2" Margin="15, 0, 0, 0" Grid.Column="1" Style="{StaticResource BackgroundGreenToGoldButtonStyle}" Template="{StaticResource ButtonTemplate}" Content="Change Password" HorizontalAlignment="Left" VerticalAlignment="Center" />
                     <PasswordBox x:Name="CurrentPasswordPasswordBox" Visibility="Hidden" Grid.Row="3" Grid.Column="2" Margin="0, 3, 0, 3" Padding="4" PasswordChanged="PasswordChanged" />
@@ -69,7 +73,7 @@
                     <Label x:Name="CurrentPasswordLabel" Visibility="Hidden" FontSize="15" Grid.Row="3" Grid.Column="1" Foreground="{StaticResource White}" Content="Current Password: " HorizontalAlignment="Right" VerticalAlignment="Bottom" />
                     <Label x:Name="NewPasswordLabel" Visibility="Hidden" FontSize="15" Grid.Row="4" Grid.Column="1" Foreground="{StaticResource White}" Content="New Password: " HorizontalAlignment="Right" VerticalAlignment="Bottom" />
                     <Label x:Name="RepeatNewPasswordLabel" Visibility="Hidden" FontSize="15" Grid.Row="5" Grid.Column="1" Foreground="{StaticResource White}" Content="Repeat New Password: " HorizontalAlignment="Right" VerticalAlignment="Bottom" />
-                    <Button x:Name="SavePasswordButton" Visibility="Hidden" Grid.Row="6" Grid.Column="1" Width="70" Content="Save" Click="SavePasswordButton_Click" Style="{StaticResource BackgroundGreenToGoldButtonStyle}" Template="{StaticResource ButtonTemplate}" HorizontalAlignment="Right" />
+                    <Button x:Name="SavePasswordButton" Visibility="Hidden" Grid.Row="6" Grid.Column="2" Width="70" Content="Save" Click="SavePasswordButton_Click" Style="{StaticResource BackgroundGreenToGoldButtonStyle}" Template="{StaticResource ButtonTemplate}" HorizontalAlignment="Left" />
                     <Button x:Name="BackFromPasswordChangeButton" Visibility="Hidden" Grid.Row="6" Grid.Column="2" Width="70" Content="Back" Click="BackFromPasswordChangeButton_Click" Style="{StaticResource BackgroundGreenToGoldButtonStyle}" Template="{StaticResource ButtonTemplate}" HorizontalAlignment="Right" />
                     <Label x:Name="PasswordsDoesntMatchLabel" Visibility="Hidden"  FontSize="15" Grid.Row="5" Grid.Column="3" Foreground="Red" FontWeight="Bold" Content="Passwords Does Not Match!" HorizontalAlignment="Left" VerticalAlignment="Bottom" />
 

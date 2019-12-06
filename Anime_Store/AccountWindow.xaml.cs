@@ -33,9 +33,10 @@ namespace Anime_Store
 
         private void SaveButton_Click(object sender, RoutedEventArgs e)
         {
-
+            //Not Implemeted
         }
 
+        //View Changers
         private void ProfileSettingsButton_Click(object sender, RoutedEventArgs e)
         {
             DataContext = new ProfileSettingsViewModel();

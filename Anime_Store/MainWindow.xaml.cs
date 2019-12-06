@@ -39,7 +39,7 @@ namespace Anime_Store
             
 
         }
-
+        //Login/logout/Account Events
         private void AccountButton_Click(object sender, RoutedEventArgs e)
         {
             AccountWindow account = new AccountWindow();
@@ -68,7 +68,7 @@ namespace Anime_Store
             login.Show();
             login.Closed += Login_Closed;
         }
-
+        //Search Events
         /// <summary>
         /// Sends the text information for the Search class.
         /// </summary>
@@ -76,7 +76,7 @@ namespace Anime_Store
         {
             Search.getAutoText(Autotxt, lbSuggestion);
         }
-
+        //View Chengers
         private void AnimeButton_Click(object sender, RoutedEventArgs e)
         {
             DataContext = new AnimeListViewModel();

@@ -32,6 +32,7 @@ namespace Anime_Store.Views
         //Description Events
         private void ChangeDescriptionButton_Click(object sender, RoutedEventArgs e)
         {
+            
             DescriptionTextBlock.Visibility = Visibility.Hidden;
             DescriptionTextBox.Visibility = Visibility.Visible;
             SaveDescriptionButton.Visibility = Visibility.Visible;
@@ -57,11 +58,15 @@ namespace Anime_Store.Views
             SaveDescriptionButton.Visibility = Visibility.Hidden;
             BackFromDescriptionButton.Visibility = Visibility.Hidden;
             ChangeDescriptionButton.Visibility = Visibility.Visible;
+            DescriptionTextBox.Text = null;  
 
         }
-
+        //Password Events
         private void ChangePasswordButton_Click(object sender, RoutedEventArgs e)
         {
+            CurrentPasswordPasswordBox.Password = null;
+            NewPasswordPasswordBox.Password = null;
+            RepeatNewPasswordPasswordBox.Password = null;
             ChangePasswordButton.Visibility = Visibility.Hidden;
             CurrentPasswordLabel.Visibility = Visibility.Visible;
             CurrentPasswordPasswordBox.Visibility = Visibility.Visible;
