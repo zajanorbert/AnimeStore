@@ -60,7 +60,56 @@ namespace Anime_Store.Views
 
         }
 
+        private void ChangePasswordButton_Click(object sender, RoutedEventArgs e)
+        {
+            ChangePasswordButton.Visibility = Visibility.Hidden;
+            CurrentPasswordLabel.Visibility = Visibility.Visible;
+            CurrentPasswordPasswordBox.Visibility = Visibility.Visible;
+            NewPasswordLabel.Visibility = Visibility.Visible;
+            NewPasswordPasswordBox.Visibility = Visibility.Visible;
+            RepeatNewPasswordLabel.Visibility = Visibility.Visible;
+            RepeatNewPasswordPasswordBox.Visibility = Visibility.Visible;
+            SavePasswordButton.Visibility = Visibility.Visible;
+            BackFromPasswordChangeButton.Visibility = Visibility.Visible;
 
+        }
 
+        private void SavePasswordButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (NewPasswordPasswordBox.Password == RepeatNewPasswordPasswordBox.Password)
+            {
+                ChangePasswordButton.Visibility = Visibility.Visible;
+                CurrentPasswordLabel.Visibility = Visibility.Hidden;
+                CurrentPasswordPasswordBox.Visibility = Visibility.Hidden;
+                NewPasswordLabel.Visibility = Visibility.Hidden;
+                NewPasswordPasswordBox.Visibility = Visibility.Hidden;
+                RepeatNewPasswordLabel.Visibility = Visibility.Hidden;
+                RepeatNewPasswordPasswordBox.Visibility = Visibility.Hidden;
+                SavePasswordButton.Visibility = Visibility.Hidden;
+                BackFromPasswordChangeButton.Visibility = Visibility.Hidden;
+                MessageBox.Show("Password has been changed succesfuly");
+            } else
+            {
+                PasswordsDoesntMatchLabel.Visibility = Visibility.Visible;
+            }
+        }
+        private void PasswordChanged(object sender, RoutedEventArgs e)
+        {
+            PasswordsDoesntMatchLabel.Visibility = Visibility.Hidden;
+        }
+
+        private void BackFromPasswordChangeButton_Click(object sender, RoutedEventArgs e)
+        {
+            ChangePasswordButton.Visibility = Visibility.Visible;
+            CurrentPasswordLabel.Visibility = Visibility.Hidden;
+            CurrentPasswordPasswordBox.Visibility = Visibility.Hidden;
+            NewPasswordLabel.Visibility = Visibility.Hidden;
+            NewPasswordPasswordBox.Visibility = Visibility.Hidden;
+            RepeatNewPasswordLabel.Visibility = Visibility.Hidden;
+            RepeatNewPasswordPasswordBox.Visibility = Visibility.Hidden;
+            SavePasswordButton.Visibility = Visibility.Hidden;
+            BackFromPasswordChangeButton.Visibility = Visibility.Hidden;
+            PasswordsDoesntMatchLabel.Visibility = Visibility.Hidden;
+        }
     }
 }
