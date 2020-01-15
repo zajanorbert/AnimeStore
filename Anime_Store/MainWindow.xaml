@@ -99,7 +99,7 @@
                 <ScrollViewer Grid.Column="1" VerticalScrollBarVisibility="Auto"/>
             </Grid>
             <!-- Pages -->
-            <Grid Grid.Row="4">
+            <Grid Grid.Row="4" MinHeight="30">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="4*" />
                     <ColumnDefinition Width="*" />
@@ -121,6 +121,36 @@
                         <ColumnDefinition Width="2*" />
                         <ColumnDefinition Width="6.5*" />
                     </Grid.ColumnDefinitions>
+                    <Button x:Name="PreviousPageButton" Click="PreviousPageButton_Click" Grid.Column="1" Style="{StaticResource ButtonStyleSimpleHoverEffect}" MinHeight="16" Grid.Row="0" Background="Transparent" BorderBrush="Transparent" Padding="0">
+                        <Label Content="Previous" FontSize="15" FontWeight="Bold" Style="{StaticResource GoldToGreenHoverColor}"/>
+                    </Button>
+                    <Button x:Name="NumberPageButton1" Click="NumberPageButton1_Click" Grid.Column="3" Style="{StaticResource ButtonStyleSimpleHoverEffect}" MinHeight="16" Grid.Row="0" Background="Transparent" BorderBrush="Transparent" Padding="0">
+                        <Label Content="1" FontSize="15" FontWeight="Bold" Style="{StaticResource GoldToGreenHoverColor}"/>
+                    </Button>
+                    <Button x:Name="NumberPageButton2" Click="NumberPageButton2_Click" Grid.Column="4" Style="{StaticResource ButtonStyleSimpleHoverEffect}" MinHeight="16" Grid.Row="0" Background="Transparent" BorderBrush="Transparent" Padding="0">
+                        <Label Content="2" FontSize="15" FontWeight="Bold" Style="{StaticResource GoldToGreenHoverColor}"/>
+                    </Button>
+                    <Button x:Name="NumberPageButton3" Click="NumberPageButton3_Click" Grid.Column="5" Style="{StaticResource ButtonStyleSimpleHoverEffect}" MinHeight="16" Grid.Row="0" Background="Transparent" BorderBrush="Transparent" Padding="0">
+                        <Label Content="3" FontSize="15" FontWeight="Bold" Style="{StaticResource GoldToGreenHoverColor}"/>
+                    </Button>
+                    <Button x:Name="NumberPageButton4" Click="NumberPageButton4_Click" Grid.Column="6" Style="{StaticResource ButtonStyleSimpleHoverEffect}" MinHeight="16" Grid.Row="0" Background="Transparent" BorderBrush="Transparent" Padding="0">
+                        <Label Content="4" FontSize="15" FontWeight="Bold" Style="{StaticResource GoldToGreenHoverColor}"/>
+                    </Button>
+                    <Button x:Name="NumberPageButton5" Click="NumberPageButton5_Click" Grid.Column="7" Style="{StaticResource ButtonStyleSimpleHoverEffect}" MinHeight="16" Grid.Row="0" Background="Transparent" BorderBrush="Transparent" Padding="0">
+                        <Label Content="5" FontSize="15" FontWeight="Bold" Style="{StaticResource GoldToGreenHoverColor}"/>
+                    </Button>
+                    <Button x:Name="NumberPageButton6" Click="NumberPageButton6_Click" Grid.Column="8" Style="{StaticResource ButtonStyleSimpleHoverEffect}" MinHeight="16" Grid.Row="0" Background="Transparent" BorderBrush="Transparent" Padding="0">
+                        <Label Content="6" FontSize="15" FontWeight="Bold" Style="{StaticResource GoldToGreenHoverColor}"/>
+                    </Button>
+                    <Button x:Name="NumberPageButton7" Click="NumberPageButton7_Click" Grid.Column="9" Style="{StaticResource ButtonStyleSimpleHoverEffect}" MinHeight="16" Grid.Row="0" Background="Transparent" BorderBrush="Transparent" Padding="0">
+                        <Label Content="7" FontSize="15" FontWeight="Bold" Style="{StaticResource GoldToGreenHoverColor}"/>
+                    </Button>
+                    <Button x:Name="NumberPageButton8" Click="NumberPageButton8_Click" Grid.Column="10" Style="{StaticResource ButtonStyleSimpleHoverEffect}" MinHeight="16" Grid.Row="0" Background="Transparent" BorderBrush="Transparent" Padding="0">
+                        <Label Content="8" FontSize="15" FontWeight="Bold" Style="{StaticResource GoldToGreenHoverColor}"/>
+                    </Button>
+                    <Button x:Name="NextButton" Click="NextButton_Click" Grid.Column="12" Style="{StaticResource ButtonStyleSimpleHoverEffect}" MinHeight="16" Grid.Row="0" Background="Transparent" BorderBrush="Transparent" Padding="0">
+                        <Label Content="Next" FontSize="15" FontWeight="Bold" Style="{StaticResource GoldToGreenHoverColor}"/>
+                    </Button>
                 </Grid>
             </Grid>
         </Grid>

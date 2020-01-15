@@ -101,5 +101,55 @@ namespace Anime_Store
         {
             DataContext = new AnimeListViewModel();
         }
+
+        private void PreviousPageButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void NumberPageButton1_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void NumberPageButton2_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void NumberPageButton3_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void NumberPageButton4_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void NumberPageButton5_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void NumberPageButton6_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void NumberPageButton7_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void NumberPageButton8_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void NextButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
