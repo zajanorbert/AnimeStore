@@ -8,14 +8,15 @@
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
         <ScrollViewer Grid.Column="0" x:Name="MainThumbnail" VerticalScrollBarVisibility="Auto">
-            <Grid   Background="{StaticResource GreyColor}" Height="706">
+            <Grid   Background="{StaticResource GreyColor}" Height="1206">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="12*"/>
                     <RowDefinition Height="0.6*"/>
                     <RowDefinition Height="0.75*"/>
-                    <RowDefinition Height="2*"/>
+                    <RowDefinition Height="12*"/>
                     <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
+                <!-- Inormation Labels And Buttons-->
                 <Grid Grid.Row="0">
                     <Grid.ColumnDefinitions >
                         <ColumnDefinition Width="2*"/>
@@ -33,9 +34,11 @@
                         <TextBlock TextWrapping="Wrap" HorizontalAlignment="Left" Text="1986" Foreground="{StaticResource White}" Margin="5, 0, 0, 0" />
                     </StackPanel>
                 </Grid>
+                <!-- Green Textbox-->
                 <Grid Grid.Row="1" VerticalAlignment="Center">
-                    <TextBlock Padding="15,15,0,0" Text="EPISODES" Background="{StaticResource LimeGreenColor}" FontWeight="Bold" OpacityMask="#FF4DC932" Grid.Column="0" VerticalAlignment="Center" Height="50"/>
+                    <TextBlock Padding="15,6,0,0" Text="EPISODES" Background="{StaticResource LimeGreenColor}" FontWeight="Bold" OpacityMask="#FF4DC932" Grid.Column="0" VerticalAlignment="Center" Height="30"/>
                 </Grid>
+                <!-- Episodes/100 Selector Buttons-->
                 <Grid Grid.Row="2">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="*"/>
@@ -65,8 +68,83 @@
                         <Label Content="501-600" FontSize="13" FontWeight="Bold" Style="{StaticResource GoldToGreenHoverColor}"/>
                     </Button>
                 </Grid>
-                <Grid Grid.Row="3">
-                    
+                <!-- Episode Buttons-->
+                <Grid Grid.Row="3" >
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <!-- 1ST Row-->
+                    <Button Grid.Column="0" Grid.Row="0" Style="{StaticResource ButtonStyleSimpleHoverEffect}" Background="{StaticResource DirtyWhite}" MinHeight="16" Margin="10,5,5,10"  VerticalAlignment="Center">
+                        <Label Content="SAMPLE" FontSize="13" FontWeight="Bold" Style="{StaticResource GoldToGreenHoverColor}"/>
+                    </Button>
+                    <Button Grid.Column="1" Grid.Row="0" Style="{StaticResource ButtonStyleSimpleHoverEffect}" Background="{StaticResource DirtyWhite}" MinHeight="16" Margin="10,5,5,10"  VerticalAlignment="Center">
+                        <Label Content="SAMPLE" FontSize="13" FontWeight="Bold" Style="{StaticResource GoldToGreenHoverColor}"/>
+                    </Button>
+                    <Button Grid.Column="2" Grid.Row="0" Style="{StaticResource ButtonStyleSimpleHoverEffect}" Background="{StaticResource DirtyWhite}" MinHeight="16" Margin="10,5,5,10"  VerticalAlignment="Center">
+                        <Label Content="SAMPLE" FontSize="13" FontWeight="Bold" Style="{StaticResource GoldToGreenHoverColor}"/>
+                    </Button>
+                    <Button Grid.Column="3" Grid.Row="0" Style="{StaticResource ButtonStyleSimpleHoverEffect}" Background="{StaticResource DirtyWhite}" MinHeight="16" Margin="10,5,5,10"  VerticalAlignment="Center">
+                        <Label Content="SAMPLE" FontSize="13" FontWeight="Bold" Style="{StaticResource GoldToGreenHoverColor}"/>
+                    </Button>
+                    <Button Grid.Column="4" Grid.Row="0" Style="{StaticResource ButtonStyleSimpleHoverEffect}" Background="{StaticResource DirtyWhite}" MinHeight="16" Margin="10,5,5,10"  VerticalAlignment="Center">
+                        <Label Content="SAMPLE" FontSize="13" FontWeight="Bold" Style="{StaticResource GoldToGreenHoverColor}"/>
+                    </Button>
+                    <Button Grid.Column="5" Grid.Row="0" Style="{StaticResource ButtonStyleSimpleHoverEffect}" Background="{StaticResource DirtyWhite}" MinHeight="16" Margin="10,5,5,10"  VerticalAlignment="Center">
+                        <Label Content="SAMPLE" FontSize="13" FontWeight="Bold" Style="{StaticResource GoldToGreenHoverColor}"/>
+                    </Button>
+                    <Button Grid.Column="6" Grid.Row="0" Style="{StaticResource ButtonStyleSimpleHoverEffect}" Background="{StaticResource DirtyWhite}" MinHeight="16" Margin="10,5,5,10"  VerticalAlignment="Center">
+                        <Label Content="SAMPLE" FontSize="13" FontWeight="Bold" Style="{StaticResource GoldToGreenHoverColor}"/>
+                    </Button>
+                    <Button Grid.Column="7" Grid.Row="0" Style="{StaticResource ButtonStyleSimpleHoverEffect}" Background="{StaticResource DirtyWhite}" MinHeight="16" Margin="10,5,5,10"  VerticalAlignment="Center">
+                        <Label Content="SAMPLE" FontSize="13" FontWeight="Bold" Style="{StaticResource GoldToGreenHoverColor}"/>
+                    </Button>
+                    <!-- 2ND Row-->
+                    <Button Grid.Column="0" Grid.Row="1" Style="{StaticResource ButtonStyleSimpleHoverEffect}" Background="{StaticResource DirtyWhite}" MinHeight="16" Margin="10,5,5,10"  VerticalAlignment="Center">
+                        <Label Content="SAMPLE" FontSize="13" FontWeight="Bold" Style="{StaticResource GoldToGreenHoverColor}"/>
+                    </Button>
+                    <Button Grid.Column="1" Grid.Row="1" Style="{StaticResource ButtonStyleSimpleHoverEffect}" Background="{StaticResource DirtyWhite}" MinHeight="16" Margin="10,5,5,10"  VerticalAlignment="Center">
+                        <Label Content="SAMPLE" FontSize="13" FontWeight="Bold" Style="{StaticResource GoldToGreenHoverColor}"/>
+                    </Button>
+                    <Button Grid.Column="2" Grid.Row="1" Style="{StaticResource ButtonStyleSimpleHoverEffect}" Background="{StaticResource DirtyWhite}" MinHeight="16" Margin="10,5,5,10"  VerticalAlignment="Center">
+                        <Label Content="SAMPLE" FontSize="13" FontWeight="Bold" Style="{StaticResource GoldToGreenHoverColor}"/>
+                    </Button>
+                    <Button Grid.Column="3" Grid.Row="1" Style="{StaticResource ButtonStyleSimpleHoverEffect}" Background="{StaticResource DirtyWhite}" MinHeight="16" Margin="10,5,5,10"  VerticalAlignment="Center">
+                        <Label Content="SAMPLE" FontSize="13" FontWeight="Bold" Style="{StaticResource GoldToGreenHoverColor}"/>
+                    </Button>
+                    <Button Grid.Column="4" Grid.Row="1" Style="{StaticResource ButtonStyleSimpleHoverEffect}" Background="{StaticResource DirtyWhite}" MinHeight="16" Margin="10,5,5,10"  VerticalAlignment="Center">
+                        <Label Content="SAMPLE" FontSize="13" FontWeight="Bold" Style="{StaticResource GoldToGreenHoverColor}"/>
+                    </Button>
+                    <Button Grid.Column="5" Grid.Row="1" Style="{StaticResource ButtonStyleSimpleHoverEffect}" Background="{StaticResource DirtyWhite}" MinHeight="16" Margin="10,5,5,10"  VerticalAlignment="Center">
+                        <Label Content="SAMPLE" FontSize="13" FontWeight="Bold" Style="{StaticResource GoldToGreenHoverColor}"/>
+                    </Button>
+                    <Button Grid.Column="6" Grid.Row="1" Style="{StaticResource ButtonStyleSimpleHoverEffect}" Background="{StaticResource DirtyWhite}" MinHeight="16" Margin="10,5,5,10"  VerticalAlignment="Center">
+                        <Label Content="SAMPLE" FontSize="13" FontWeight="Bold" Style="{StaticResource GoldToGreenHoverColor}"/>
+                    </Button>
+                    <Button Grid.Column="7" Grid.Row="1" Style="{StaticResource ButtonStyleSimpleHoverEffect}" Background="{StaticResource DirtyWhite}" MinHeight="16" Margin="10,5,5,10"  VerticalAlignment="Center">
+                        <Label Content="SAMPLE" FontSize="13" FontWeight="Bold" Style="{StaticResource GoldToGreenHoverColor}"/>
+                    </Button>
                 </Grid>
             </Grid>
         </ScrollViewer>

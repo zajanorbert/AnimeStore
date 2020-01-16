@@ -80,17 +80,17 @@
                 <ListBox x:Name="lbSuggestion" Background="LightGray" Visibility="Collapsed" Margin="0" Grid.Column="9" VerticalAlignment="Bottom"/>
             </Grid>
             <!-- Green Textblocks -->
-            <Grid Grid.Row="2" MaxHeight="20">
+            <Grid Grid.Row="2" MaxHeight="30" VerticalAlignment="Center">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="4*"/>
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
-                <TextBlock Padding="15,0,0,0" Text="ANIME" Background="{StaticResource LimeGreenColor}" FontWeight="Bold" OpacityMask="#FF4DC932" Grid.Column="0"/>
-                <TextBlock Padding="15,0,0,0" Text="GENRE" Background="{StaticResource LimeGreenColor}" FontWeight="Bold" OpacityMask="#FF4DC932" Grid.Column="1"/>
+                <TextBlock Padding="15,0,0,0" Text="ANIME" Background="{StaticResource LimeGreenColor}" FontWeight="Bold" OpacityMask="#FF4DC932" Grid.Column="0" Height="30"/>
+                <TextBlock Padding="15,0,0,0" Text="GENRE" Background="{StaticResource LimeGreenColor}" FontWeight="Bold" OpacityMask="#FF4DC932" Grid.Column="1" Height="30"/>
 
             </Grid>
 
-            <!-- Scroll windows-->
+            <!-- Scroll Windows-->
             <Grid Grid.Row="3" MinHeight="578"  RenderTransformOrigin="0.5,0.5" ScrollViewer.VerticalScrollBarVisibility="Hidden">
 
                 <Grid.ColumnDefinitions>
@@ -101,7 +101,7 @@
                 <ContentControl Grid.Column="0" Content="{Binding}"/>
                 <ScrollViewer Grid.Column="1" VerticalScrollBarVisibility="Auto"/>
             </Grid>
-            <!-- Pages -->
+            <!-- Page Slector Buttons-->
             <Grid Grid.Row="4" MinHeight="30" x:Name="PageSelectorGrid">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="4*" />

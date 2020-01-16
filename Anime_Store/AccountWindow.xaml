@@ -21,15 +21,15 @@
             <views:SecuritySettingsView DataContext="{Binding}" />
         </DataTemplate>
     </Window.Resources>
-    <Border Padding="10" Background="#FF1D1B1B">
-        <Grid Background="#FF1D1B1B">
+    <Border Padding="10" Background="{StaticResource DarkGreyColor}">
+        <Grid Background="{StaticResource DarkGreyColor}">
             <Grid.RowDefinitions>
                 <RowDefinition Height="1.5*"/>
                 <RowDefinition Height="0.5*"/>
                 <RowDefinition Height="15*"/>
                 
             </Grid.RowDefinitions>
-            <!-- Back to Menu / Save -->
+            <!-- Back to Menu / Save Buttons -->
             <Grid Margin="0 10 0 0" Grid.Row="0">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="2*"/>
@@ -55,7 +55,7 @@
                     <ColumnDefinition Width="*" />
                     <ColumnDefinition Width="4*" />
                 </Grid.ColumnDefinitions>
-                <!-- Setting Changer-->
+                <!-- Setting Changer Buttons-->
                 
                 <Grid Grid.Column="0" Background="{StaticResource MidGreyColor}" >
                     <Grid.RowDefinitions>
