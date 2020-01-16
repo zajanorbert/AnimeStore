@@ -24,5 +24,9 @@ namespace Anime_Store.Views
         {
             InitializeComponent();
         }
+        private void Episode_Button_Click(object sender, RoutedEventArgs e)
+        {
+            Application.Current.MainWindow.DataContext = new VideoPlayerView();
+        }
     }
 }
