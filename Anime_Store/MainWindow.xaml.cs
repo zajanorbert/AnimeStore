@@ -36,6 +36,7 @@ namespace Anime_Store
             sendAutoText();
             Autotxt.TextChanged += Search.Autotxt_TextChanged;
             lbSuggestion.SelectionChanged += Search.lbSuggestion_SelectionChanged;
+            PageSelectorGrid.Visibility = Visibility.Visible;
             
 
         }

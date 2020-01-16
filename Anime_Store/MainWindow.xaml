@@ -26,6 +26,9 @@
         <DataTemplate x:Name="MusicListViewTemplate" DataType="{x:Type viewmodels:MusicListViewModel}">
             <views:MusicListView DataContext="{Binding}" />
         </DataTemplate>
+        <DataTemplate x:Name="VideoPlayerTemplate" DataType="{x:Type viewmodels:VideoPlayerViewModel}">
+            <views:VideoPlayerView DataContext="{Binding}" />
+        </DataTemplate>
     </Window.Resources>
     <Border Padding="10" Background="{StaticResource DarkGreyColor}">
         <Grid>
@@ -99,7 +102,7 @@
                 <ScrollViewer Grid.Column="1" VerticalScrollBarVisibility="Auto"/>
             </Grid>
             <!-- Pages -->
-            <Grid Grid.Row="4" MinHeight="30">
+            <Grid Grid.Row="4" MinHeight="30" x:Name="PageSelectorGrid">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="4*" />
                     <ColumnDefinition Width="*" />
