@@ -8,12 +8,12 @@
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
         <ScrollViewer x:Name="MainThumbnail" VerticalScrollBarVisibility="Auto">
-            <Grid Background="{StaticResource GreyColor}" Height="600">
+            <Grid Background="{StaticResource GreyColor}" Height="600" AllowDrop="True" Drop="Grid_Drop">
                 <Grid.RowDefinitions>
+                    <RowDefinition Height="1.6*"/>
                     <RowDefinition Height="*"/>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="12*"/>
-                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="13*"/>
+                    <RowDefinition Height="2*"/>
                     <RowDefinition Height="1.5*"/>
                     <RowDefinition Height="1.5*"/>
                     <RowDefinition Height="*"/>
@@ -25,11 +25,30 @@
                 <!-- Title Labe-->
                 <Label x:Name="CurrentAnimeName" Content="Bosco Daibouken" FontSize="18" Foreground="{StaticResource GoldColor}" FontWeight="Bold" Margin="25,0,0,0" />
                 <!-- Go Back Button-->
-                <Button Grid.Column="0" Grid.Row="1" Style="{StaticResource ButtonStyleSimpleHoverEffect}" Background="Transparent" BorderBrush="Transparent" HorizontalAlignment="Left" Margin="25,0,0,0">
+                <Button x:Name="GoBackButton" Click="GoBackButton_Click" Grid.Column="0" Grid.Row="1" Style="{StaticResource ButtonStyleSimpleHoverEffect}" Background="Transparent" BorderBrush="Transparent" HorizontalAlignment="Left" Margin="25,0,0,0">
                     <Label Content="Go Back" FontSize="13" FontWeight="DemiBold" Style="{StaticResource GoldToGreenHoverColor}" HorizontalAlignment="Center"/>
                 </Button>
                 <!-- Media Element Window-->
-                <MediaElement Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="2" Grid.RowSpan="2" Margin="25,0,25,0"/>
+                <MediaElement x:Name="MediaElement1" Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="2"  Margin="25,0,25,0" AllowDrop="True" MediaOpened="MediaElement1_MediaOpened"/>
+                <!-- Play/Pause/Stop Buttons, Volume/Seek Slider-->
+                <Grid Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="5*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="5*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="2.5*"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Button x:Name="PlayButton" Click="PlayButton_Click" Visibility="Hidden" Content="Play" Grid.Row="0" Grid.Column="2" />
+                    <Button x:Name="PauseButton" Click="PauseButton_Click" Visibility="Visible" Content="Pause" Grid.Row="0" Grid.Column="2"/>
+                    <Button x:Name="StopButtun" Click="StopButtun_Click" Content="Stop" Grid.Row="0" Grid.Column="3"/>
+                    <Slider x:Name="VolumeSlider" Grid.Row="0" Grid.Column="4" Margin="200,0,25,0" VerticalAlignment="Center" Maximum="1" Width="170" HorizontalAlignment="Right"  LargeChange="0.1" SmallChange="0.01" Value="1" ValueChanged="VolumeSlider_ValueChanged"/>
+                    <Slider x:Name="SeekSlider" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="5" Margin="25,0,25,0" VerticalAlignment="Center" ValueChanged="SeekSlider_ValueChanged" SmallChange="10" LargeChange="10"/>
+                </Grid>
             </Grid>
         </ScrollViewer>
     </Grid>
